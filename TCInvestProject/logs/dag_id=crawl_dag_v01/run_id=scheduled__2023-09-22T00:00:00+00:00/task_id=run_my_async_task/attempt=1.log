@@ -1,0 +1,193 @@
+[2023-09-27T16:19:59.449+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [queued]>
+[2023-09-27T16:19:59.454+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [queued]>
+[2023-09-27T16:19:59.455+0700] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2023-09-27T16:19:59.463+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-09-22 00:00:00+00:00
+[2023-09-27T16:19:59.467+0700] {standard_task_runner.py:57} INFO - Started process 193 to run task
+[2023-09-27T16:19:59.471+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'scheduled__2023-09-22T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmpa8wjjg9_']
+[2023-09-27T16:19:59.473+0700] {standard_task_runner.py:85} INFO - Job 4: Subtask run_my_async_task
+[2023-09-27T16:19:59.518+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [running]> on host d8a5cf8abb31
+[2023-09-27T16:19:59.574+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-22T00:00:00+00:00'
+[2023-09-27T16:19:59.587+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-27T16:19:59.589+0700] {logging_mixin.py:151} INFO - etl_ingest_time_2023_09_27_16_19_59
+[2023-09-27T16:19:59.835+0700] {logging_mixin.py:151} INFO - 10
+[2023-09-27T16:19:59.836+0700] {logging_mixin.py:151} INFO - 1
+[2023-09-27T16:19:59.842+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/1 [00:00<?, ?it/s]
+[2023-09-27T16:19:59.843+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-27T16:20:00.716+0700] {logging_mixin.py:151} INFO - [Empty DataFrame
+Columns: []
+Index: [],          p    v      cp  rcp   a     ba     sa     hl     pcp         t
+0  54800.0  100  1700.0  0.0      200.0  200.0  False  4800.0  14:45:00
+1  50000.0  100 -3100.0 -0.1  BU  200.0  200.0  False     0.0  11:07:53
+2  50000.0  100 -3100.0 -0.1  BU  100.0  200.0  False -3000.0  11:07:38
+3  53000.0  200  -100.0  0.0  SD    0.0  200.0  False     0.0  10:13:35,          p     v     cp  rcp   a     ba      sa     hl  pcp         t
+0  29900.0   600  100.0  0.0  BU  600.0  1000.0  False  0.0  13:50:52
+1  29900.0  1000  100.0  0.0  SD    0.0  1000.0  False  0.0  10:36:57,          p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  17600.0   400 -100.0  0.0  SD  100.0  4900.0  False    0.0  11:24:46
+1  17600.0  4000 -100.0  0.0  SD  100.0  4500.0  False    0.0  11:15:52
+2  17600.0   500 -100.0  0.0  SD  100.0   500.0  False -200.0  11:15:08
+3  17800.0   100  100.0  0.0  BU  100.0     0.0  False    0.0  11:15:07, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  10700.0  200 -300.0  0.0  BU  400.0  0.0  False  0.0  11:29:11
+1  10700.0  100 -300.0  0.0  BU  200.0  0.0  False  0.0  11:20:17
+2  10700.0  100 -300.0  0.0  BU  100.0  0.0  False  0.0  09:28:31,          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  22800.0  100  500.0  0.0  BU  100.0  0.0  False  0.0  14:30:26]
+[2023-09-27T16:20:00.717+0700] {logging_mixin.py:151} INFO - hello
+[2023-09-27T16:20:00.718+0700] {logging_mixin.py:151} INFO - 10
+[2023-09-27T16:20:00.719+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/10 [00:00<?, ?it/s]
+[2023-09-27T16:20:00.719+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-27T16:20:00.721+0700] {logging_mixin.py:151} INFO - ASG is empty
+[2023-09-27T16:20:00.726+0700] {logging_mixin.py:151} INFO -          p    v      cp  rcp   a     ba     sa     hl     pcp         t
+0  54800.0  100  1700.0  0.0      200.0  200.0  False  4800.0  14:45:00
+1  50000.0  100 -3100.0 -0.1  BU  200.0  200.0  False     0.0  11:07:53
+2  50000.0  100 -3100.0 -0.1  BU  100.0  200.0  False -3000.0  11:07:38
+3  53000.0  200  -100.0  0.0  SD    0.0  200.0  False     0.0  10:13:35
+[2023-09-27T16:20:00.738+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_27_16_19_59;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-27T16:20:02.011+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-27T16:20:02.012+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-27T16:20:02.416+0700] {logging_mixin.py:151} WARNING -  20%|##        | 2/10 [00:01<00:06,  1.18it/s]
+[2023-09-27T16:20:02.416+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-27T16:20:02.422+0700] {logging_mixin.py:151} INFO -          p     v     cp  rcp   a     ba      sa     hl  pcp         t
+0  29900.0   600  100.0  0.0  BU  600.0  1000.0  False  0.0  13:50:52
+1  29900.0  1000  100.0  0.0  SD    0.0  1000.0  False  0.0  10:36:57
+[2023-09-27T16:20:02.428+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_27_16_19_59;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-27T16:20:02.531+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-27T16:20:02.532+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-27T16:20:02.618+0700] {logging_mixin.py:151} WARNING -  30%|###       | 3/10 [00:01<00:04,  1.73it/s]
+[2023-09-27T16:20:02.619+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-27T16:20:02.625+0700] {logging_mixin.py:151} INFO -          p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  17600.0   400 -100.0  0.0  SD  100.0  4900.0  False    0.0  11:24:46
+1  17600.0  4000 -100.0  0.0  SD  100.0  4500.0  False    0.0  11:15:52
+2  17600.0   500 -100.0  0.0  SD  100.0   500.0  False -200.0  11:15:08
+3  17800.0   100  100.0  0.0  BU  100.0     0.0  False    0.0  11:15:07
+[2023-09-27T16:20:02.631+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_27_16_19_59;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-27T16:20:02.743+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-27T16:20:02.744+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-27T16:20:02.975+0700] {logging_mixin.py:151} WARNING -  40%|####      | 4/10 [00:02<00:02,  2.02it/s]
+[2023-09-27T16:20:02.975+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-27T16:20:02.976+0700] {logging_mixin.py:151} INFO - BSH is empty
+[2023-09-27T16:20:02.976+0700] {logging_mixin.py:151} INFO - DHB is empty
+[2023-09-27T16:20:02.978+0700] {logging_mixin.py:151} INFO - DP2 is empty
+[2023-09-27T16:20:02.980+0700] {logging_mixin.py:151} INFO - DSG is empty
+[2023-09-27T16:20:02.985+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  10700.0  200 -300.0  0.0  BU  400.0  0.0  False  0.0  11:29:11
+1  10700.0  100 -300.0  0.0  BU  200.0  0.0  False  0.0  11:20:17
+2  10700.0  100 -300.0  0.0  BU  100.0  0.0  False  0.0  09:28:31
+[2023-09-27T16:20:02.991+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_27_16_19_59;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-27T16:20:03.182+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-27T16:20:03.183+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-27T16:20:03.255+0700] {logging_mixin.py:151} WARNING -  90%|######### | 9/10 [00:02<00:00,  5.68it/s]
+[2023-09-27T16:20:03.256+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-27T16:20:03.262+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  22800.0  100  500.0  0.0  BU  100.0  0.0  False  0.0  14:30:26
+[2023-09-27T16:20:03.268+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_27_16_19_59;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-27T16:20:03.435+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-27T16:20:03.436+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-27T16:20:03.509+0700] {logging_mixin.py:151} WARNING - 100%|##########| 10/10 [00:02<00:00,  5.28it/s]
+[2023-09-27T16:20:03.510+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-27T16:20:03.510+0700] {logging_mixin.py:151} WARNING - 100%|##########| 10/10 [00:02<00:00,  3.58it/s]
+[2023-09-27T16:20:03.511+0700] {logging_mixin.py:151} INFO - chay lan 1
+[2023-09-27T16:20:03.511+0700] {logging_mixin.py:151} INFO - Took 3.67 s
+[2023-09-27T16:20:03.512+0700] {logging_mixin.py:151} WARNING - 100%|##########| 1/1 [00:03<00:00,  3.67s/it]
+[2023-09-27T16:20:03.513+0700] {logging_mixin.py:151} WARNING - 100%|##########| 1/1 [00:03<00:00,  3.67s/it]
+[2023-09-27T16:20:03.513+0700] {logging_mixin.py:151} INFO - DONE CRAWL IN 3.68 s
+[2023-09-27T16:20:03.516+0700] {python.py:194} INFO - Done. Returned value was: None
+[2023-09-27T16:20:03.528+0700] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20230922T000000, start_date=20230927T091959, end_date=20230927T092003
+[2023-09-27T16:20:03.579+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-27T16:20:03.596+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-28T14:11:45.972+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [queued]>
+[2023-09-28T14:11:45.985+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [queued]>
+[2023-09-28T14:11:45.987+0700] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2023-09-28T14:11:46.028+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-09-22 00:00:00+00:00
+[2023-09-28T14:11:46.049+0700] {standard_task_runner.py:57} INFO - Started process 790 to run task
+[2023-09-28T14:11:46.082+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'scheduled__2023-09-22T00:00:00+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmpyywowhk_']
+[2023-09-28T14:11:46.098+0700] {standard_task_runner.py:85} INFO - Job 70: Subtask run_my_async_task
+[2023-09-28T14:11:46.300+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [running]> on host 052a1d3faae2
+[2023-09-28T14:11:46.552+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-22T00:00:00+00:00'
+[2023-09-28T14:11:46.601+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-28T14:11:46.609+0700] {logging_mixin.py:151} INFO - etl_ingest_time_2023_09_28_14_11_46
+[2023-09-28T14:11:46.675+0700] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/crawlInvest.py", line 161, in run_my_async_task
+    asyncio.run(crawl(Code_stock))
+  File "/usr/local/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/airflow/dags/crawlInvest.py", line 97, in crawl
+    cursor.execute(query_db)
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Database 'etl_ingest_time_2023_09_28_14_11_46' already exists. Choose a different database name. (1801) (SQLExecDirectW)")
+[2023-09-28T14:11:46.689+0700] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20230922T000000, start_date=20230928T071145, end_date=20230928T071146
+[2023-09-28T14:11:46.728+0700] {standard_task_runner.py:104} ERROR - Failed to execute job 70 for task run_my_async_task (('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Database 'etl_ingest_time_2023_09_28_14_11_46' already exists. Choose a different database name. (1801) (SQLExecDirectW)"); 790)
+[2023-09-28T14:11:46.772+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-28T14:11:46.794+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-28T14:14:40.368+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [queued]>
+[2023-09-28T14:14:40.387+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [queued]>
+[2023-09-28T14:14:40.388+0700] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2023-09-28T14:14:40.419+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-09-22 00:00:00+00:00
+[2023-09-28T14:14:40.439+0700] {standard_task_runner.py:57} INFO - Started process 974 to run task
+[2023-09-28T14:14:40.454+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'scheduled__2023-09-22T00:00:00+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmp1rya8ucg']
+[2023-09-28T14:14:40.465+0700] {standard_task_runner.py:85} INFO - Job 102: Subtask run_my_async_task
+[2023-09-28T14:14:40.595+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [running]> on host 052a1d3faae2
+[2023-09-28T14:14:40.729+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-22T00:00:00+00:00'
+[2023-09-28T14:14:40.748+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-28T14:14:40.750+0700] {logging_mixin.py:151} INFO - etl_ingest_time_2023_09_28_14_14_40
+[2023-09-28T14:14:40.825+0700] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/crawlInvest.py", line 161, in run_my_async_task
+    asyncio.run(crawl(Code_stock))
+  File "/usr/local/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/airflow/dags/crawlInvest.py", line 97, in crawl
+    cursor.execute(query_db)
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Database 'etl_ingest_time_2023_09_28_14_14_40' already exists. Choose a different database name. (1801) (SQLExecDirectW)")
+[2023-09-28T14:14:40.837+0700] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20230922T000000, start_date=20230928T071440, end_date=20230928T071440
+[2023-09-28T14:14:40.849+0700] {standard_task_runner.py:104} ERROR - Failed to execute job 102 for task run_my_async_task (('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Database 'etl_ingest_time_2023_09_28_14_14_40' already exists. Choose a different database name. (1801) (SQLExecDirectW)"); 974)
+[2023-09-28T14:14:40.905+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-28T14:14:40.934+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-28T14:18:38.777+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [queued]>
+[2023-09-28T14:18:38.835+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [queued]>
+[2023-09-28T14:18:38.839+0700] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2023-09-28T14:18:39.017+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-09-22 00:00:00+00:00
+[2023-09-28T14:18:39.023+0700] {standard_task_runner.py:57} INFO - Started process 1191 to run task
+[2023-09-28T14:18:39.110+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'scheduled__2023-09-22T00:00:00+00:00', '--job-id', '135', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmp1sxu11qq']
+[2023-09-28T14:18:39.142+0700] {standard_task_runner.py:85} INFO - Job 135: Subtask run_my_async_task
+[2023-09-28T14:18:39.360+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:00:00+00:00 [running]> on host 052a1d3faae2
+[2023-09-28T14:18:39.816+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-22T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-22T00:00:00+00:00'
+[2023-09-28T14:18:39.932+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-28T14:18:39.940+0700] {logging_mixin.py:151} INFO - etl_ingest_time_2023_09_28_14_18_39
+[2023-09-28T14:18:40.020+0700] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/crawlInvest.py", line 161, in run_my_async_task
+    asyncio.run(crawl(Code_stock))
+  File "/usr/local/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/airflow/dags/crawlInvest.py", line 97, in crawl
+    cursor.execute(query_db)
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Database 'etl_ingest_time_2023_09_28_14_18_39' already exists. Choose a different database name. (1801) (SQLExecDirectW)")
+[2023-09-28T14:18:40.082+0700] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20230922T000000, start_date=20230928T071838, end_date=20230928T071840
+[2023-09-28T14:18:40.124+0700] {standard_task_runner.py:104} ERROR - Failed to execute job 135 for task run_my_async_task (('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Database 'etl_ingest_time_2023_09_28_14_18_39' already exists. Choose a different database name. (1801) (SQLExecDirectW)"); 1191)
+[2023-09-28T14:18:40.179+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-28T14:18:40.221+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

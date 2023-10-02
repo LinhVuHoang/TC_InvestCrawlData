@@ -1,0 +1,235 @@
+[2023-09-28T14:06:30.507+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:06:00+00:00 [queued]>
+[2023-09-28T14:06:30.517+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:06:00+00:00 [queued]>
+[2023-09-28T14:06:30.518+0700] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2023-09-28T14:06:30.548+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-09-22 00:06:00+00:00
+[2023-09-28T14:06:30.565+0700] {standard_task_runner.py:57} INFO - Started process 361 to run task
+[2023-09-28T14:06:30.587+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'scheduled__2023-09-22T00:06:00+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmpz_sjh7ds']
+[2023-09-28T14:06:30.593+0700] {standard_task_runner.py:85} INFO - Job 31: Subtask run_my_async_task
+[2023-09-28T14:06:30.739+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:06:00+00:00 [running]> on host 052a1d3faae2
+[2023-09-28T14:06:30.987+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-22T00:06:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-22T00:06:00+00:00'
+[2023-09-28T14:06:31.031+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC', 'GTS', 'HRC', 'HSA', 'HSM', 'IFS', 'ISH', 'MKP', 'MVB', 'NAW', 'PDN', 'PJC', 'PNP', 'PVX', 'SAF', 'SC5', 'SGH', 'SJG', 'SQC', 'SZE', 'TTL', 'TVC', 'VCF', 'VRG', 'VSI', 'VSN', 'WCS', 'XDH', 'YBC', 'APC', 'AME', 'BSP', 'BSQ', 'BTW', 'CCR', 'CDP', 'CMD', 'CMF', 'CTW', 'DFF', 'DP1', 'DWS', 'HC3', 'HJS', 'HNA', 'HNF', 'HTL', 'LM8', 'MDF', 'MH3', 'MVN', 'NCS', 'NTH', 'PAC', 'PGI', 'PTI', 'SGI', 'SID', 'SLS', 'SRC', 'SWC', 'TBD', 'TPC', 'TV3', 'TYA', 'VFC', 'VFG', 'VGR', 'VIT', 'VNC', 'XHC', 'EMS', 'HUG', 'IST', 'NBW', 'PCT', 'SSC', 'TIX', 'AST', 'FOC', 'LIX', 'NET', 'SBL', 'VDP', 'VNF', 'HWS', 'MAS', 'NST', 'SMA', 'YBM', 'BWS', 'CBI', 'HTI', 'RDP', 'VMC', 'VPS', 'CCI', 'CLC', 'GMC', 'HBC', 'HVN', 'POT', 'TVB', 'ADG', 'DRG', 'MML', 'NSC', 'PGD', 'PGS', 'POS', 'TDP', 'UIC', 'SZB', 'VET', 'PSP', 'VHL', 'ABT', 'CDN', 'EID', 'FCS', 'HVT', 'RTB', 'SEA', 'SHP', 'SMB', 'VCR', 'VIN', 'AGP', 'CAV', 'PDV', 'PMC', 'SAS', 'TDM', 'VMD', 'PRT', 'SJE', 'TCT', 'V21', 'VBB', 'BSG', 'TRA', 'VNA', 'GSM', 'SHN', 'VCB', 'APF', 'CAG', 'CIA', 'CLH', 'CMV', 'DRL', 'DTL', 'FIC', 'HMC', 'HRT', 'HTV', 'ICT', 'INN', 'KSV', 'LEC', 'NTT', 'OPC', 'PCG', 'PGB', 'SAV', 'SRT', 'SZL', 'TLP', 'TMS', 'TRC', 'TTT', 'VAF', 'VEF', 'VIF', 'VPD', 'BHN', 'CNT', 'HND', 'HTG', 'MTA', 'SFI', 'SJS', 'TV1', 'AAA', 'AAS', 'AAT', 'AAV', 'ABB', 'ABC', 'ABI', 'ABS', 'ACB', 'ACC', 'ACG', 'ACL', 'ACV', 'ADS', 'AFX', 'AGG', 'AGR', 'AMS', 'AMV', 'ANV', 'APG', 'APH', 'API', 'APS', 'ASM', 'ASP', 'BAB', 'BAF', 'BCC', 'BCE', 'BCG', 'BCM', 'BDG', 'BDT', 'BFC', 'BIC', 'BID', 'BKG', 'BMC', 'BMI', 'BMP', 'BMS', 'BNA', 'BOT', 'BSI', 'BSR', 'BTP', 'BTS', 'BVB', 'BVH', 'BVS', 'BWE', 'C32', 'C47', 'C4G', 'CAP', 'CC1', 'CCL', 'CDC', 'CEO', 'CHP', 'CII', 'CKG', 'CLL', 'CLX', 'CMG', 'CMX', 'CNG', 'CRC', 'CRE', 'CSC', 'CSI', 'CSM', 'CSV', 'CTD', 'CTF', 'CTG', 'CTI', 'CTR', 'CTS', 'D2D', 'DAG', 'DAH', 'DAT', 'DBC', 'DBD', 'DCL', 'DCM', 'DDG', 'DDV', 'DGC', 'DGT', 'DGW', 'DHA', 'DHC', 'DHG', 'DHT', 'DIG', 'DIH', 'DL1', 'DLG', 'DMC', 'DNP', 'DP3', 'DPG', 'DPM', 'DPR', 'DQC', 'DRC', 'DRH', 'DRI', 'DSC', 'DSN', 'DTD', 'DTI', 'DVN', 'DVP', 'DXG', 'DXP', 'DXS', 'EIB', 'ELC', 'EVE', 'EVF', 'EVG', 'EVS', 'FCM', 'FCN', 'FIR', 'FIT', 'FMC', 'FOX', 'FPT', 'FRT', 'FTS', 'G36', 'GAS', 'GDT', 'GEG', 'GEX', 'GHC', 'GIL', 'GKM', 'GMD', 'GSP', 'GVR', 'HAG', 'HAH', 'HAN', 'HAP', 'HAR', 'HAX', 'HCM', 'HDB', 'HDC', 'HDG', 'HEM', 'HHS', 'HHV', 'HII', 'HLD', 'HNG', 'HOM', 'HPG', 'HQC', 'HSG', 'HT1', 'HTN', 'HTP', 'HUB', 'HUT', 'HVH', 'ICG', 'ICN', 'IDC', 'IDI', 'IDJ', 'IDV', 'IJC', 'ILB', 'ILS', 'IMP', 'IPA', 'ITA', 'ITC', 'ITD', 'IVS', 'JVC', 'KBC', 'KDC', 'KDH', 'KGM', 'KHG', 'KHP', 'KLB', 'KMR', 'KOS', 'KPF', 'KSB', 'KSF', 'L14', 'L18', 'L61', 'LAS', 'LBM', 'LCG', 'LDG', 'LDP', 'LGL', 'LHC', 'LHG', 'LIC', 'LIG', 'LMH', 'LPB', 'LSS', 'LTG', 'M10', 'MBB', 'MBG', 'MBS', 'MCH', 'MCM', 'MIG', 'MPC', 'MSB', 'MSH', 'MSN', 'MSR', 'MST', 'MVC', 'MWG', 'NAB', 'NAF', 'NBB', 'NBC', 'NCT', 'NDN', 'NED', 'NHA', 'NHH', 'NHT', 'NKG', 'NLG', 'NNC', 'NRC', 'NT2', 'NTC', 'NTL', 'NTP', 'NVB', 'NVL', 'NVT', 'OCB', 'OCH', 'OGC', 'OIL', 'ORS', 'PAN', 'PAS', 'PBC', 'PC1', 'PDR', 'PET', 'PGC', 'PGV', 'PHC', 'PHP', 'PHR', 'PLC', 'PLP', 'PLX', 'PNJ', 'POM', 'POW', 'PPC', 'PPH', 'PSD', 'PSH', 'PSI', 'PTB', 'PTL', 'PVB', 'PVC', 'PVD', 'PVG', 'PVI', 'PVM', 'PVP', 'PVS', 'PVT', 'PXL', 'PXS', 'QBS', 'QCG', 'QNS', 'QTP', 'RAL', 'REE', 'RGC', 'RIC', 'S99', 'SAB', 'SAM', 'SBA', 'SBS', 'SBT', 'SBV', 'SCD', 'SCG', 'SCI', 'SCR', 'SCS', 'SD9', 'SFG', 'SGB', 'SGN', 'SGP', 'SGR', 'SGT', 'SHB', 'SHI', 'SHS', 'SIP', 'SJD', 'SJF', 'SKG', 'SKH', 'SKV', 'SMC', 'SNZ', 'SRA', 'SSB', 'SSH', 'SSI', 'ST8', 'STB', 'STK', 'SZC', 'TAR', 'TCB', 'TCD', 'TCH', 'TCI', 'TCL', 'TCM', 'TCO', 'TCW', 'TDC', 'TDH', 'TEG', 'THD', 'THG', 'THT', 'TID', 'TIG', 'TIP', 'TIS', 'TLG', 'TLH', 'TMT', 'TN1', 'TNA', 'TNG', 'TNH', 'TNI', 'TNT', 'TOS', 'TPB', 'TSC', 'TTA', 'TTF', 'TTN', 'TV2', 'TV4', 'TVD', 'TVN', 'TVS', 'TVT', 'VC2', 'VC3', 'VC7', 'VCG', 'VCI', 'VCS', 'VDS', 'VEA', 'VEC', 'VFS', 'VGC', 'VGG', 'VGI', 'VGS', 'VGT', 'VGV', 'VHC', 'VHE', 'VHM', 'VIB', 'VIC', 'VIP', 'VIX', 'VJC', 'VLB', 'VLC', 'VNB', 'VND', 'VNE', 'VNG', 'VNM', 'VNR', 'VNS', 'VOC', 'VOS', 'VPB', 'VPG', 'VPH', 'VPI', 'VRC', 'VRE', 'VSA', 'VSC', 'VSF', 'VSH', 'VTO', 'VTP', 'VTR', 'VTV', 'WSS', 'XMC', 'YEG']
+[2023-09-28T14:06:31.035+0700] {logging_mixin.py:151} INFO - etl_ingest_time_2023_09_28_14_06_31
+[2023-09-28T14:06:31.326+0700] {logging_mixin.py:151} INFO - 623
+[2023-09-28T14:06:31.328+0700] {logging_mixin.py:151} INFO - 13
+[2023-09-28T14:06:31.338+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/13 [00:00<?, ?it/s]
+[2023-09-28T14:06:31.341+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC', 'GTS', 'HRC', 'HSA', 'HSM', 'IFS', 'ISH', 'MKP', 'MVB', 'NAW', 'PDN', 'PJC', 'PNP', 'PVX', 'SAF', 'SC5', 'SGH', 'SJG', 'SQC', 'SZE', 'TTL', 'TVC', 'VCF', 'VRG', 'VSI', 'VSN', 'WCS', 'XDH', 'YBC', 'APC', 'AME', 'BSP', 'BSQ', 'BTW', 'CCR', 'CDP', 'CMD', 'CMF', 'CTW', 'DFF', 'DP1']
+[2023-09-28T14:07:34.527+0700] {logging_mixin.py:151} INFO - [Empty DataFrame
+Columns: []
+Index: [],          p    v      cp  rcp   a   ba     sa     hl  pcp         t
+0  50200.0  100 -4600.0 -0.1  SD  0.0  100.0  False  0.0  09:00:13, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba     sa     hl    pcp         t
+0  10700.0  200    0.0  0.0  BU  400.0  100.0  False    0.0  14:03:06
+1  10700.0  100    0.0  0.0  BU  200.0  100.0  False    0.0  13:35:59
+2  10700.0  100    0.0  0.0  SD  100.0  100.0  False -200.0  10:40:12
+3  10900.0  100  200.0  0.0  BU  100.0    0.0  False    0.0  09:57:39, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],           p     v     cp  rcp   a      ba   sa     hl    pcp         t
+0   20000.0   100  300.0  0.0  BU  6300.0  0.0  False  100.0  14:03:35
+1   19900.0   500  200.0  0.0  BU  6200.0  0.0  False -100.0  13:51:03
+2   20000.0   100  300.0  0.0  BU  5700.0  0.0  False    0.0  13:45:05
+3   20000.0   500  300.0  0.0  BU  5600.0  0.0  False  100.0  11:29:57
+4   19900.0   500  200.0  0.0  BU  5100.0  0.0  False    0.0  11:10:05
+5   19900.0  1000  200.0  0.0  BU  4600.0  0.0  False  100.0  11:02:15
+6   19800.0  1500  100.0  0.0  BU  3600.0  0.0  False    0.0  10:40:53
+7   19800.0  1100  100.0  0.0  BU  2100.0  0.0  False    0.0  10:35:19
+8   19800.0   100  100.0  0.0  BU  1000.0  0.0  False    0.0  10:33:31
+9   19800.0   100  100.0  0.0  BU   900.0  0.0  False    0.0  10:31:28
+10  19800.0   600  100.0  0.0  BU   800.0  0.0  False    0.0  10:28:17
+11  19800.0   100  100.0  0.0  BU   200.0  0.0  False  100.0  10:13:43
+12  19700.0   100    0.0  0.0  BU   100.0  0.0  False    0.0  09:27:41, Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba   sa     hl    pcp         t
+0  19300.0  100 -100.0  0.0  BU  500.0  0.0  False  100.0  13:56:51
+1  19200.0  100 -200.0  0.0  BU  400.0  0.0  False  400.0  13:41:48
+2  18800.0  200 -600.0  0.0  BU  300.0  0.0  False -200.0  10:14:46
+3  19000.0  100 -400.0  0.0  BU  100.0  0.0  False    0.0  10:14:24, Empty DataFrame
+Columns: []
+Index: [],           p    v      cp  rcp   a     ba   sa     hl  pcp         t
+0  112000.0  100  1000.0  0.0  BU  100.0  0.0  False  0.0  10:41:37, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a   ba     sa     hl  pcp         t
+0  26700.0  100  200.0  0.0  SD  0.0  200.0  False  0.0  09:50:36
+1  26700.0  100  200.0  0.0  SD  0.0  100.0  False  0.0  09:48:19,          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  13500.0  100  500.0  0.0  BU  100.0  0.0  False  0.0  09:33:09, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],         p    v     cp  rcp   a     ba     sa     hl  pcp         t
+0  8900.0  400 -700.0 -0.1  SD  600.0  500.0  False  0.0  11:23:47
+1  8900.0  600 -700.0 -0.1  BU  600.0  100.0  False  0.0  11:18:41
+2  8900.0  100 -700.0 -0.1  SD    0.0  100.0  False  0.0  10:27:38, Empty DataFrame
+Columns: []
+Index: [],           p    v      cp  rcp   a     ba   sa     hl    pcp         t
+0  190000.0  100 -1000.0  0.0  BU  600.0  0.0  False    0.0  13:49:07
+1  190000.0  100 -1000.0  0.0  BU  500.0  0.0  False -100.0  13:49:07
+2  190100.0  100  -900.0  0.0  BU  400.0  0.0  False -100.0  13:49:07
+3  190200.0  100  -800.0  0.0  BU  300.0  0.0  False -300.0  13:49:07
+4  190500.0  100  -500.0  0.0  BU  200.0  0.0  False    0.0  13:49:07
+5  190500.0  100  -500.0  0.0  BU  100.0  0.0  False    0.0  13:09:55,          p     v     cp  rcp   a      ba      sa     hl    pcp         t
+0  24200.0  2900 -400.0  0.0  SD  1000.0  4100.0  False -100.0  13:13:24
+1  24300.0   100 -300.0  0.0  SD  1000.0  1200.0  False    0.0  13:12:14
+2  24300.0  1100 -300.0  0.0  SD  1000.0  1100.0  False -300.0  13:11:36
+3  24600.0  1000    0.0  0.0  BU  1000.0     0.0  False    0.0  11:12:49, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  10700.0  3500 -100.0  0.0  SD  200.0  3900.0  False -400.0  13:00:01
+1  11100.0   200  300.0  0.0  BU  200.0   400.0  False  300.0  13:00:00
+2  10800.0   300    0.0  0.0  SD    0.0   400.0  False    0.0  11:06:17
+3  10800.0   100    0.0  0.0  SD    0.0   100.0  False    0.0  10:54:26,         p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  8100.0  1300 -200.0  0.0  SD  600.0  1700.0  False    0.0  13:37:39
+1  8100.0   100 -200.0  0.0  SD  600.0   400.0  False    0.0  13:33:15
+2  8100.0   100 -200.0  0.0  SD  600.0   300.0  False    0.0  13:15:30
+3  8100.0   200 -200.0  0.0  SD  600.0   200.0  False    0.0  11:18:00
+4  8100.0   100 -200.0  0.0  BU  600.0     0.0  False -200.0  11:13:26
+5  8300.0   500    0.0  0.0  BU  500.0     0.0  False    0.0  10:34:10, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba   sa     hl    pcp         t
+0  11400.0  300  300.0  0.0  BU  500.0  0.0  False  100.0  10:21:45
+1  11300.0  200  200.0  0.0  BU  200.0  0.0  False    0.0  10:21:15,          p     v   cp  rcp   a      ba   sa     hl  pcp         t
+0  11000.0  2500  0.0  0.0  BU  4900.0  0.0  False  0.0  09:39:59
+1  11000.0  2400  0.0  0.0  BU  2400.0  0.0  False  0.0  09:22:45,          p     v     cp  rcp   a      ba   sa     hl    pcp         t
+0  17700.0  1600    0.0  0.0  BU  2200.0  0.0  False -200.0  13:38:56
+1  17900.0   500  200.0  0.0  BU   600.0  0.0  False  100.0  09:56:03
+2  17800.0   100  100.0  0.0  BU   100.0  0.0  False    0.0  09:54:07, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  27000.0   200 -100.0  0.0  SD  300.0  2500.0  False    0.0  13:15:46
+1  27000.0  2000 -100.0  0.0  SD  300.0  2300.0  False -100.0  13:15:32
+2  27100.0   300    0.0  0.0  SD  300.0   300.0  False    0.0  09:47:31
+3  27100.0   300    0.0  0.0  BU  300.0     0.0  False    0.0  09:07:13]
+[2023-09-28T14:07:34.529+0700] {logging_mixin.py:151} INFO - hello
+[2023-09-28T14:07:34.530+0700] {logging_mixin.py:151} INFO - 50
+[2023-09-28T14:07:34.530+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/50 [00:00<?, ?it/s]
+[2023-09-28T14:07:34.531+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:07:34.531+0700] {logging_mixin.py:151} INFO - ASG is empty
+[2023-09-28T14:07:34.536+0700] {logging_mixin.py:151} INFO -          p    v      cp  rcp   a   ba     sa     hl  pcp         t
+0  50200.0  100 -4600.0 -0.1  SD  0.0  100.0  False  0.0  09:00:13
+[2023-09-28T14:07:34.543+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_06_31;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:07:36.635+0700] {logging_mixin.py:151} WARNING -   2%|2         | 1/50 [00:02<01:43,  2.10s/it]
+[2023-09-28T14:07:36.636+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/13 [01:05<?, ?it/s]
+[2023-09-28T14:07:36.637+0700] {logging_mixin.py:151} INFO - Cannot save file into a non-existent directory: '/opt/***/data/etl_ingest_time_2023_09_28_14_06_31'
+[2023-09-28T14:07:36.638+0700] {python.py:194} INFO - Done. Returned value was: None
+[2023-09-28T14:07:36.648+0700] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20230922T000600, start_date=20230928T070630, end_date=20230928T070736
+[2023-09-28T14:07:36.668+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-28T14:07:36.682+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-09-28T14:11:48.907+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:06:00+00:00 [queued]>
+[2023-09-28T14:11:48.953+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:06:00+00:00 [queued]>
+[2023-09-28T14:11:48.956+0700] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2023-09-28T14:11:49.004+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-09-22 00:06:00+00:00
+[2023-09-28T14:11:49.041+0700] {standard_task_runner.py:57} INFO - Started process 816 to run task
+[2023-09-28T14:11:49.080+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'scheduled__2023-09-22T00:06:00+00:00', '--job-id', '79', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmpv90squvm']
+[2023-09-28T14:11:49.107+0700] {standard_task_runner.py:85} INFO - Job 79: Subtask run_my_async_task
+[2023-09-28T14:11:49.449+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:06:00+00:00 [running]> on host 052a1d3faae2
+[2023-09-28T14:11:50.015+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-22T00:06:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-22T00:06:00+00:00'
+[2023-09-28T14:11:50.132+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-28T14:11:50.149+0700] {logging_mixin.py:151} INFO - etl_ingest_time_2023_09_28_14_11_50
+[2023-09-28T14:11:50.691+0700] {logging_mixin.py:151} INFO - 10
+[2023-09-28T14:11:50.693+0700] {logging_mixin.py:151} INFO - 1
+[2023-09-28T14:11:50.704+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/1 [00:00<?, ?it/s]
+[2023-09-28T14:11:50.704+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-28T14:11:51.934+0700] {logging_mixin.py:151} INFO - [Empty DataFrame
+Columns: []
+Index: [],          p    v      cp  rcp   a   ba     sa     hl  pcp         t
+0  50200.0  100 -4600.0 -0.1  SD  0.0  100.0  False  0.0  09:00:13, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba     sa     hl    pcp         t
+0  10700.0  200    0.0  0.0  BU  400.0  100.0  False    0.0  14:03:06
+1  10700.0  100    0.0  0.0  BU  200.0  100.0  False    0.0  13:35:59
+2  10700.0  100    0.0  0.0  SD  100.0  100.0  False -200.0  10:40:12
+3  10900.0  100  200.0  0.0  BU  100.0    0.0  False    0.0  09:57:39, Empty DataFrame
+Columns: []
+Index: []]
+[2023-09-28T14:11:51.935+0700] {logging_mixin.py:151} INFO - hello
+[2023-09-28T14:11:51.936+0700] {logging_mixin.py:151} INFO - 10
+[2023-09-28T14:11:51.937+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/10 [00:00<?, ?it/s]
+[2023-09-28T14:11:51.938+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:11:51.938+0700] {logging_mixin.py:151} INFO - ASG is empty
+[2023-09-28T14:11:51.943+0700] {logging_mixin.py:151} INFO -          p    v      cp  rcp   a   ba     sa     hl  pcp         t
+0  50200.0  100 -4600.0 -0.1  SD  0.0  100.0  False  0.0  09:00:13
+[2023-09-28T14:11:51.954+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_11_50;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:11:53.004+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:11:53.005+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:11:53.250+0700] {logging_mixin.py:151} WARNING -  20%|##        | 2/10 [00:01<00:05,  1.52it/s]
+[2023-09-28T14:11:53.250+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:11:53.251+0700] {logging_mixin.py:151} INFO - BCF is empty
+[2023-09-28T14:11:53.252+0700] {logging_mixin.py:151} INFO - BSA is empty
+[2023-09-28T14:11:53.252+0700] {logging_mixin.py:151} INFO - BSH is empty
+[2023-09-28T14:11:53.253+0700] {logging_mixin.py:151} INFO - DHB is empty
+[2023-09-28T14:11:53.255+0700] {logging_mixin.py:151} INFO - DP2 is empty
+[2023-09-28T14:11:53.256+0700] {logging_mixin.py:151} INFO - DSG is empty
+[2023-09-28T14:11:53.262+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba     sa     hl    pcp         t
+0  10700.0  200    0.0  0.0  BU  400.0  100.0  False    0.0  14:03:06
+1  10700.0  100    0.0  0.0  BU  200.0  100.0  False    0.0  13:35:59
+2  10700.0  100    0.0  0.0  SD  100.0  100.0  False -200.0  10:40:12
+3  10900.0  100  200.0  0.0  BU  100.0    0.0  False    0.0  09:57:39
+[2023-09-28T14:11:53.268+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_11_50;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:11:53.374+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:11:53.375+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:11:53.448+0700] {logging_mixin.py:151} WARNING -  90%|######### | 9/10 [00:01<00:00,  7.52it/s]
+[2023-09-28T14:11:53.449+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:11:53.449+0700] {logging_mixin.py:151} INFO - EIC is empty
+[2023-09-28T14:11:53.450+0700] {logging_mixin.py:151} WARNING - 100%|##########| 10/10 [00:01<00:00,  6.62it/s]
+[2023-09-28T14:11:53.450+0700] {logging_mixin.py:151} INFO - chay lan 1
+[2023-09-28T14:11:53.450+0700] {logging_mixin.py:151} INFO - Took 2.75 s
+[2023-09-28T14:11:53.451+0700] {logging_mixin.py:151} WARNING - 100%|##########| 1/1 [00:02<00:00,  2.75s/it]
+[2023-09-28T14:11:53.451+0700] {logging_mixin.py:151} WARNING - 100%|##########| 1/1 [00:02<00:00,  2.75s/it]
+[2023-09-28T14:11:53.452+0700] {logging_mixin.py:151} INFO - DONE CRAWL IN 2.76 s
+[2023-09-28T14:11:53.453+0700] {python.py:194} INFO - Done. Returned value was: None
+[2023-09-28T14:11:53.463+0700] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20230922T000600, start_date=20230928T071148, end_date=20230928T071153
+[2023-09-28T14:11:53.515+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-28T14:11:53.532+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

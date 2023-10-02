@@ -1,0 +1,11 @@
+more_itertools
+setuptools
+pandas
+requests
+tqdm
+aiohttp
+schedule
+psutil
+pyodbc
+prometheus_client
+apache-airflow-providers-microsoft-azure

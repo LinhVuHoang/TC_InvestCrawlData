@@ -1,0 +1,22 @@
+[2023-09-22T17:47:52.887+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task manual__2023-09-22T09:05:17.387394+00:00 [queued]>
+[2023-09-22T17:47:52.894+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task manual__2023-09-22T09:05:17.387394+00:00 [queued]>
+[2023-09-22T17:47:52.895+0700] {taskinstance.py:1359} INFO - Starting attempt 14 of 19
+[2023-09-22T17:47:52.909+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-09-22 09:05:17.387394+00:00
+[2023-09-22T17:47:52.915+0700] {standard_task_runner.py:57} INFO - Started process 2294 to run task
+[2023-09-22T17:47:52.919+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'manual__2023-09-22T09:05:17.387394+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmpqhsfz_kn']
+[2023-09-22T17:47:52.921+0700] {standard_task_runner.py:85} INFO - Job 77: Subtask run_my_async_task
+[2023-09-22T17:47:52.967+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task manual__2023-09-22T09:05:17.387394+00:00 [running]> on host 92f43f7b42a7
+[2023-09-22T17:47:53.036+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-22T09:05:17.387394+00:00' AIRFLOW_CTX_TRY_NUMBER='14' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-09-22T09:05:17.387394+00:00'
+[2023-09-22T17:47:53.049+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-22T17:47:53.050+0700] {logging_mixin.py:151} INFO - 10
+[2023-09-22T17:47:53.051+0700] {logging_mixin.py:151} INFO - 1
+[2023-09-22T17:47:53.054+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/1 [00:00<?, ?it/s]
+[2023-09-22T17:47:53.055+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-22T17:47:56.340+0700] {logging_mixin.py:151} INFO - [None, None, None, None, None, None, None, None, None, None]
+[2023-09-22T17:47:56.341+0700] {logging_mixin.py:151} INFO - hello
+[2023-09-22T17:47:56.342+0700] {logging_mixin.py:151} WARNING - 100%|##########| 1/1 [00:03<00:00,  3.29s/it]
+[2023-09-22T17:47:56.343+0700] {logging_mixin.py:151} WARNING - 100%|##########| 1/1 [00:03<00:00,  3.29s/it]
+[2023-09-22T17:47:56.344+0700] {python.py:194} INFO - Done. Returned value was: None
+[2023-09-22T17:47:56.356+0700] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20230922T090517, start_date=20230922T104752, end_date=20230922T104756
+[2023-09-22T17:47:56.380+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-22T17:47:56.396+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,122 @@
+[2023-10-02T16:07:56.560+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task manual__2023-10-02T09:07:53.932906+00:00 [queued]>
+[2023-10-02T16:07:56.565+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task manual__2023-10-02T09:07:53.932906+00:00 [queued]>
+[2023-10-02T16:07:56.566+0700] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2023-10-02T16:07:56.573+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-10-02 09:07:53.932906+00:00
+[2023-10-02T16:07:56.578+0700] {standard_task_runner.py:57} INFO - Started process 138 to run task
+[2023-10-02T16:07:56.582+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'manual__2023-10-02T09:07:53.932906+00:00', '--job-id', '191', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmpp_opqn9t']
+[2023-10-02T16:07:56.583+0700] {standard_task_runner.py:85} INFO - Job 191: Subtask run_my_async_task
+[2023-10-02T16:07:56.621+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task manual__2023-10-02T09:07:53.932906+00:00 [running]> on host 052a1d3faae2
+[2023-10-02T16:07:56.676+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T09:07:53.932906+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-02T09:07:53.932906+00:00'
+[2023-10-02T16:07:56.688+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-10-02T16:07:56.690+0700] {logging_mixin.py:151} INFO - etl_ingest_time_2023_10_02_16_07_56
+[2023-10-02T16:07:56.959+0700] {logging_mixin.py:151} INFO - 10
+[2023-10-02T16:07:56.963+0700] {logging_mixin.py:151} INFO - 1
+[2023-10-02T16:07:56.974+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/1 [00:00<?, ?it/s]
+[2023-10-02T16:07:56.976+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-10-02T16:07:57.844+0700] {logging_mixin.py:151} INFO - [Empty DataFrame
+Columns: []
+Index: [],          p    v      cp  rcp   a     ba   sa     hl     pcp         t
+0  53500.0  100  3300.0  0.1  BU  300.0  0.0  False     0.0  10:15:22
+1  53500.0  100  3300.0  0.1  BU  200.0  0.0  False -1400.0  09:58:23
+2  54900.0  100  4700.0  0.1  BU  100.0  0.0  False     0.0  09:31:30,          p     v     cp  rcp   a      ba   sa     hl    pcp         t
+0  29500.0   100 -400.0  0.0  BU  1600.0  0.0  False  500.0  13:08:28
+1  29000.0  1100 -900.0  0.0  BU  1500.0  0.0  False -100.0  09:42:03
+2  29100.0   200 -800.0  0.0  BU   400.0  0.0  False -200.0  09:40:37
+3  29300.0   200 -600.0  0.0  BU   200.0  0.0  False    0.0  09:33:00,          p    v     cp  rcp   a     ba     sa     hl  pcp         t
+0  17900.0  100  200.0  0.0  BU  100.0  200.0  False  0.0  14:42:53
+1  17900.0  200  200.0  0.0  SD    0.0  200.0  False  0.0  13:17:43, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],         p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  4500.0  100  500.0  0.1  BU  100.0  0.0  False  0.0  09:42:41,           p     v     cp  rcp   a      ba      sa     hl    pcp         t
+0   10900.0   100  300.0  0.0      3900.0  2000.0  False  300.0  14:45:01
+1   10600.0  1900    0.0  0.0  SD  3900.0  2000.0  False -100.0  14:29:40
+2   10700.0   700  100.0  0.0  BU  3900.0   100.0  False    0.0  14:24:20
+3   10700.0   300  100.0  0.0  BU  3200.0   100.0  False -300.0  14:24:03
+4   11000.0   800  400.0  0.0  BU  2900.0   100.0  False    0.0  14:06:57
+5   11000.0   100  400.0  0.0  BU  2100.0   100.0  False  100.0  13:36:36
+6   10900.0   100  300.0  0.0  BU  2000.0   100.0  False  200.0  13:30:16
+7   10700.0   700  100.0  0.0  BU  1900.0   100.0  False    0.0  10:46:54
+8   10700.0   200  100.0  0.0  BU  1200.0   100.0  False    0.0  10:46:40
+9   10700.0   100  100.0  0.0  BU  1000.0   100.0  False    0.0  10:45:50
+10  10700.0   900  100.0  0.0  BU   900.0   100.0  False    0.0  09:08:53
+11  10700.0   100  100.0  0.0  SD     0.0   100.0  False    0.0  09:07:18,          p    v     cp  rcp   a   ba     sa     hl  pcp         t
+0  21600.0  900  100.0  0.0  SD  0.0  900.0  False  0.0  14:53:19]
+[2023-10-02T16:07:57.845+0700] {logging_mixin.py:151} INFO - hello
+[2023-10-02T16:07:57.846+0700] {logging_mixin.py:151} INFO - 10
+[2023-10-02T16:07:57.846+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/10 [00:00<?, ?it/s]
+[2023-10-02T16:07:57.847+0700] {logging_mixin.py:151} WARNING - 
+[2023-10-02T16:07:57.848+0700] {logging_mixin.py:151} INFO - ASG is empty
+[2023-10-02T16:07:57.852+0700] {logging_mixin.py:151} INFO -          p    v      cp  rcp   a     ba   sa     hl     pcp         t
+0  53500.0  100  3300.0  0.1  BU  300.0  0.0  False     0.0  10:15:22
+1  53500.0  100  3300.0  0.1  BU  200.0  0.0  False -1400.0  09:58:23
+2  54900.0  100  4700.0  0.1  BU  100.0  0.0  False     0.0  09:31:30
+[2023-10-02T16:07:57.860+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_10_02_16_07_56;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-10-02T16:07:59.108+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-10-02T16:07:59.109+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-10-02T16:07:59.541+0700] {logging_mixin.py:151} WARNING -  20%|##        | 2/10 [00:01<00:06,  1.18it/s]
+[2023-10-02T16:07:59.542+0700] {logging_mixin.py:151} WARNING - 
+[2023-10-02T16:07:59.548+0700] {logging_mixin.py:151} INFO -          p     v     cp  rcp   a      ba   sa     hl    pcp         t
+0  29500.0   100 -400.0  0.0  BU  1600.0  0.0  False  500.0  13:08:28
+1  29000.0  1100 -900.0  0.0  BU  1500.0  0.0  False -100.0  09:42:03
+2  29100.0   200 -800.0  0.0  BU   400.0  0.0  False -200.0  09:40:37
+3  29300.0   200 -600.0  0.0  BU   200.0  0.0  False    0.0  09:33:00
+[2023-10-02T16:07:59.554+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_10_02_16_07_56;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-10-02T16:07:59.667+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-10-02T16:07:59.668+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-10-02T16:07:59.743+0700] {logging_mixin.py:151} WARNING -  30%|###       | 3/10 [00:01<00:04,  1.73it/s]
+[2023-10-02T16:07:59.744+0700] {logging_mixin.py:151} WARNING - 
+[2023-10-02T16:07:59.755+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba     sa     hl  pcp         t
+0  17900.0  100  200.0  0.0  BU  100.0  200.0  False  0.0  14:42:53
+1  17900.0  200  200.0  0.0  SD    0.0  200.0  False  0.0  13:17:43
+[2023-10-02T16:07:59.762+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_10_02_16_07_56;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-10-02T16:08:00.026+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-10-02T16:08:00.027+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-10-02T16:08:00.102+0700] {logging_mixin.py:151} WARNING -  40%|####      | 4/10 [00:02<00:02,  2.01it/s]
+[2023-10-02T16:08:00.103+0700] {logging_mixin.py:151} WARNING - 
+[2023-10-02T16:08:00.104+0700] {logging_mixin.py:151} INFO - BSH is empty
+[2023-10-02T16:08:00.104+0700] {logging_mixin.py:151} INFO - DHB is empty
+[2023-10-02T16:08:00.105+0700] {logging_mixin.py:151} INFO - DP2 is empty
+[2023-10-02T16:08:00.110+0700] {logging_mixin.py:151} INFO -         p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  4500.0  100  500.0  0.1  BU  100.0  0.0  False  0.0  09:42:41
+[2023-10-02T16:08:00.116+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_10_02_16_07_56;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-10-02T16:08:00.212+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-10-02T16:08:00.213+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-10-02T16:08:00.284+0700] {logging_mixin.py:151} WARNING -  80%|########  | 8/10 [00:02<00:00,  5.28it/s]
+[2023-10-02T16:08:00.285+0700] {logging_mixin.py:151} WARNING - 
+[2023-10-02T16:08:00.293+0700] {logging_mixin.py:151} INFO -           p     v     cp  rcp   a      ba      sa     hl    pcp         t
+0   10900.0   100  300.0  0.0      3900.0  2000.0  False  300.0  14:45:01
+1   10600.0  1900    0.0  0.0  SD  3900.0  2000.0  False -100.0  14:29:40
+2   10700.0   700  100.0  0.0  BU  3900.0   100.0  False    0.0  14:24:20
+3   10700.0   300  100.0  0.0  BU  3200.0   100.0  False -300.0  14:24:03
+4   11000.0   800  400.0  0.0  BU  2900.0   100.0  False    0.0  14:06:57
+5   11000.0   100  400.0  0.0  BU  2100.0   100.0  False  100.0  13:36:36
+6   10900.0   100  300.0  0.0  BU  2000.0   100.0  False  200.0  13:30:16
+7   10700.0   700  100.0  0.0  BU  1900.0   100.0  False    0.0  10:46:54
+8   10700.0   200  100.0  0.0  BU  1200.0   100.0  False    0.0  10:46:40
+9   10700.0   100  100.0  0.0  BU  1000.0   100.0  False    0.0  10:45:50
+10  10700.0   900  100.0  0.0  BU   900.0   100.0  False    0.0  09:08:53
+11  10700.0   100  100.0  0.0  SD     0.0   100.0  False    0.0  09:07:18
+[2023-10-02T16:08:00.299+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_10_02_16_07_56;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-10-02T16:08:00.432+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-10-02T16:08:00.433+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-10-02T16:08:00.512+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a   ba     sa     hl  pcp         t
+0  21600.0  900  100.0  0.0  SD  0.0  900.0  False  0.0  14:53:19
+[2023-10-02T16:08:00.518+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_10_02_16_07_56;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-10-02T16:08:00.627+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-10-02T16:08:00.628+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-10-02T16:08:00.834+0700] {logging_mixin.py:151} WARNING - 100%|##########| 10/10 [00:02<00:00,  4.60it/s]
+[2023-10-02T16:08:00.835+0700] {logging_mixin.py:151} WARNING - 
+[2023-10-02T16:08:00.836+0700] {logging_mixin.py:151} WARNING - 100%|##########| 10/10 [00:02<00:00,  3.35it/s]
+[2023-10-02T16:08:00.836+0700] {logging_mixin.py:151} INFO - chay lan 1
+[2023-10-02T16:08:00.837+0700] {logging_mixin.py:151} INFO - Took 3.86 s
+[2023-10-02T16:08:00.838+0700] {logging_mixin.py:151} WARNING - 100%|##########| 1/1 [00:03<00:00,  3.86s/it]
+[2023-10-02T16:08:00.838+0700] {logging_mixin.py:151} WARNING - 100%|##########| 1/1 [00:03<00:00,  3.86s/it]
+[2023-10-02T16:08:00.839+0700] {logging_mixin.py:151} INFO - DONE CRAWL IN 3.88 s
+[2023-10-02T16:08:00.843+0700] {python.py:194} INFO - Done. Returned value was: None
+[2023-10-02T16:08:00.853+0700] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20231002T090753, start_date=20231002T090756, end_date=20231002T090800
+[2023-10-02T16:08:00.914+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-10-02T16:08:00.932+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

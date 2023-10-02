@@ -1,0 +1,1379 @@
+[2023-09-28T14:09:14.786+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:18:00+00:00 [queued]>
+[2023-09-28T14:09:14.796+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:18:00+00:00 [queued]>
+[2023-09-28T14:09:14.797+0700] {taskinstance.py:1359} INFO - Starting attempt 1 of 6
+[2023-09-28T14:09:14.808+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-09-22 00:18:00+00:00
+[2023-09-28T14:09:14.813+0700] {standard_task_runner.py:57} INFO - Started process 519 to run task
+[2023-09-28T14:09:14.824+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'scheduled__2023-09-22T00:18:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmp5ki6gs2y']
+[2023-09-28T14:09:14.825+0700] {standard_task_runner.py:85} INFO - Job 51: Subtask run_my_async_task
+[2023-09-28T14:09:14.885+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task scheduled__2023-09-22T00:18:00+00:00 [running]> on host 052a1d3faae2
+[2023-09-28T14:09:14.964+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-22T00:18:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-22T00:18:00+00:00'
+[2023-09-28T14:09:14.983+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC', 'GTS', 'HRC', 'HSA', 'HSM', 'IFS', 'ISH', 'MKP', 'MVB', 'NAW', 'PDN', 'PJC', 'PNP', 'PVX', 'SAF', 'SC5', 'SGH', 'SJG', 'SQC', 'SZE', 'TTL', 'TVC', 'VCF', 'VRG', 'VSI', 'VSN', 'WCS', 'XDH', 'YBC', 'APC', 'AME', 'BSP', 'BSQ', 'BTW', 'CCR', 'CDP', 'CMD', 'CMF', 'CTW', 'DFF', 'DP1', 'DWS', 'HC3', 'HJS', 'HNA', 'HNF', 'HTL', 'LM8', 'MDF', 'MH3', 'MVN', 'NCS', 'NTH', 'PAC', 'PGI', 'PTI', 'SGI', 'SID', 'SLS', 'SRC', 'SWC', 'TBD', 'TPC', 'TV3', 'TYA', 'VFC', 'VFG', 'VGR', 'VIT', 'VNC', 'XHC', 'EMS', 'HUG', 'IST', 'NBW', 'PCT', 'SSC', 'TIX', 'AST', 'FOC', 'LIX', 'NET', 'SBL', 'VDP', 'VNF', 'HWS', 'MAS', 'NST', 'SMA', 'YBM', 'BWS', 'CBI', 'HTI', 'RDP', 'VMC', 'VPS', 'CCI', 'CLC', 'GMC', 'HBC', 'HVN', 'POT', 'TVB', 'ADG', 'DRG', 'MML', 'NSC', 'PGD', 'PGS', 'POS', 'TDP', 'UIC', 'SZB', 'VET', 'PSP', 'VHL', 'ABT', 'CDN', 'EID', 'FCS', 'HVT', 'RTB', 'SEA', 'SHP', 'SMB', 'VCR', 'VIN', 'AGP', 'CAV', 'PDV', 'PMC', 'SAS', 'TDM', 'VMD', 'PRT', 'SJE', 'TCT', 'V21', 'VBB', 'BSG', 'TRA', 'VNA', 'GSM', 'SHN', 'VCB', 'APF', 'CAG', 'CIA', 'CLH', 'CMV', 'DRL', 'DTL', 'FIC', 'HMC', 'HRT', 'HTV', 'ICT', 'INN', 'KSV', 'LEC', 'NTT', 'OPC', 'PCG', 'PGB', 'SAV', 'SRT', 'SZL', 'TLP', 'TMS', 'TRC', 'TTT', 'VAF', 'VEF', 'VIF', 'VPD', 'BHN', 'CNT', 'HND', 'HTG', 'MTA', 'SFI', 'SJS', 'TV1', 'AAA', 'AAS', 'AAT', 'AAV', 'ABB', 'ABC', 'ABI', 'ABS', 'ACB', 'ACC', 'ACG', 'ACL', 'ACV', 'ADS', 'AFX', 'AGG', 'AGR', 'AMS', 'AMV', 'ANV', 'APG', 'APH', 'API', 'APS', 'ASM', 'ASP', 'BAB', 'BAF', 'BCC', 'BCE', 'BCG', 'BCM', 'BDG', 'BDT', 'BFC', 'BIC', 'BID', 'BKG', 'BMC', 'BMI', 'BMP', 'BMS', 'BNA', 'BOT', 'BSI', 'BSR', 'BTP', 'BTS', 'BVB', 'BVH', 'BVS', 'BWE', 'C32', 'C47', 'C4G', 'CAP', 'CC1', 'CCL', 'CDC', 'CEO', 'CHP', 'CII', 'CKG', 'CLL', 'CLX', 'CMG', 'CMX', 'CNG', 'CRC', 'CRE', 'CSC', 'CSI', 'CSM', 'CSV', 'CTD', 'CTF', 'CTG', 'CTI', 'CTR', 'CTS', 'D2D', 'DAG', 'DAH', 'DAT', 'DBC', 'DBD', 'DCL', 'DCM', 'DDG', 'DDV', 'DGC', 'DGT', 'DGW', 'DHA', 'DHC', 'DHG', 'DHT', 'DIG', 'DIH', 'DL1', 'DLG', 'DMC', 'DNP', 'DP3', 'DPG', 'DPM', 'DPR', 'DQC', 'DRC', 'DRH', 'DRI', 'DSC', 'DSN', 'DTD', 'DTI', 'DVN', 'DVP', 'DXG', 'DXP', 'DXS', 'EIB', 'ELC', 'EVE', 'EVF', 'EVG', 'EVS', 'FCM', 'FCN', 'FIR', 'FIT', 'FMC', 'FOX', 'FPT', 'FRT', 'FTS', 'G36', 'GAS', 'GDT', 'GEG', 'GEX', 'GHC', 'GIL', 'GKM', 'GMD', 'GSP', 'GVR', 'HAG', 'HAH', 'HAN', 'HAP', 'HAR', 'HAX', 'HCM', 'HDB', 'HDC', 'HDG', 'HEM', 'HHS', 'HHV', 'HII', 'HLD', 'HNG', 'HOM', 'HPG', 'HQC', 'HSG', 'HT1', 'HTN', 'HTP', 'HUB', 'HUT', 'HVH', 'ICG', 'ICN', 'IDC', 'IDI', 'IDJ', 'IDV', 'IJC', 'ILB', 'ILS', 'IMP', 'IPA', 'ITA', 'ITC', 'ITD', 'IVS', 'JVC', 'KBC', 'KDC', 'KDH', 'KGM', 'KHG', 'KHP', 'KLB', 'KMR', 'KOS', 'KPF', 'KSB', 'KSF', 'L14', 'L18', 'L61', 'LAS', 'LBM', 'LCG', 'LDG', 'LDP', 'LGL', 'LHC', 'LHG', 'LIC', 'LIG', 'LMH', 'LPB', 'LSS', 'LTG', 'M10', 'MBB', 'MBG', 'MBS', 'MCH', 'MCM', 'MIG', 'MPC', 'MSB', 'MSH', 'MSN', 'MSR', 'MST', 'MVC', 'MWG', 'NAB', 'NAF', 'NBB', 'NBC', 'NCT', 'NDN', 'NED', 'NHA', 'NHH', 'NHT', 'NKG', 'NLG', 'NNC', 'NRC', 'NT2', 'NTC', 'NTL', 'NTP', 'NVB', 'NVL', 'NVT', 'OCB', 'OCH', 'OGC', 'OIL', 'ORS', 'PAN', 'PAS', 'PBC', 'PC1', 'PDR', 'PET', 'PGC', 'PGV', 'PHC', 'PHP', 'PHR', 'PLC', 'PLP', 'PLX', 'PNJ', 'POM', 'POW', 'PPC', 'PPH', 'PSD', 'PSH', 'PSI', 'PTB', 'PTL', 'PVB', 'PVC', 'PVD', 'PVG', 'PVI', 'PVM', 'PVP', 'PVS', 'PVT', 'PXL', 'PXS', 'QBS', 'QCG', 'QNS', 'QTP', 'RAL', 'REE', 'RGC', 'RIC', 'S99', 'SAB', 'SAM', 'SBA', 'SBS', 'SBT', 'SBV', 'SCD', 'SCG', 'SCI', 'SCR', 'SCS', 'SD9', 'SFG', 'SGB', 'SGN', 'SGP', 'SGR', 'SGT', 'SHB', 'SHI', 'SHS', 'SIP', 'SJD', 'SJF', 'SKG', 'SKH', 'SKV', 'SMC', 'SNZ', 'SRA', 'SSB', 'SSH', 'SSI', 'ST8', 'STB', 'STK', 'SZC', 'TAR', 'TCB', 'TCD', 'TCH', 'TCI', 'TCL', 'TCM', 'TCO', 'TCW', 'TDC', 'TDH', 'TEG', 'THD', 'THG', 'THT', 'TID', 'TIG', 'TIP', 'TIS', 'TLG', 'TLH', 'TMT', 'TN1', 'TNA', 'TNG', 'TNH', 'TNI', 'TNT', 'TOS', 'TPB', 'TSC', 'TTA', 'TTF', 'TTN', 'TV2', 'TV4', 'TVD', 'TVN', 'TVS', 'TVT', 'VC2', 'VC3', 'VC7', 'VCG', 'VCI', 'VCS', 'VDS', 'VEA', 'VEC', 'VFS', 'VGC', 'VGG', 'VGI', 'VGS', 'VGT', 'VGV', 'VHC', 'VHE', 'VHM', 'VIB', 'VIC', 'VIP', 'VIX', 'VJC', 'VLB', 'VLC', 'VNB', 'VND', 'VNE', 'VNG', 'VNM', 'VNR', 'VNS', 'VOC', 'VOS', 'VPB', 'VPG', 'VPH', 'VPI', 'VRC', 'VRE', 'VSA', 'VSC', 'VSF', 'VSH', 'VTO', 'VTP', 'VTR', 'VTV', 'WSS', 'XMC', 'YEG']
+[2023-09-28T14:09:14.985+0700] {logging_mixin.py:151} INFO - etl_ingest_time_2023_09_28_14_09_14
+[2023-09-28T14:09:15.274+0700] {logging_mixin.py:151} INFO - 623
+[2023-09-28T14:09:15.275+0700] {logging_mixin.py:151} INFO - 13
+[2023-09-28T14:09:15.284+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/13 [00:00<?, ?it/s]
+[2023-09-28T14:09:15.285+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC', 'GTS', 'HRC', 'HSA', 'HSM', 'IFS', 'ISH', 'MKP', 'MVB', 'NAW', 'PDN', 'PJC', 'PNP', 'PVX', 'SAF', 'SC5', 'SGH', 'SJG', 'SQC', 'SZE', 'TTL', 'TVC', 'VCF', 'VRG', 'VSI', 'VSN', 'WCS', 'XDH', 'YBC', 'APC', 'AME', 'BSP', 'BSQ', 'BTW', 'CCR', 'CDP', 'CMD', 'CMF', 'CTW', 'DFF', 'DP1']
+[2023-09-28T14:09:19.771+0700] {logging_mixin.py:151} INFO - [Empty DataFrame
+Columns: []
+Index: [],          p    v      cp  rcp   a   ba     sa     hl  pcp         t
+0  50200.0  100 -4600.0 -0.1  SD  0.0  100.0  False  0.0  09:00:13, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba     sa     hl    pcp         t
+0  10700.0  200    0.0  0.0  BU  400.0  100.0  False    0.0  14:03:06
+1  10700.0  100    0.0  0.0  BU  200.0  100.0  False    0.0  13:35:59
+2  10700.0  100    0.0  0.0  SD  100.0  100.0  False -200.0  10:40:12
+3  10900.0  100  200.0  0.0  BU  100.0    0.0  False    0.0  09:57:39, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],           p     v     cp  rcp   a      ba   sa     hl    pcp         t
+0   20000.0   100  300.0  0.0  BU  6300.0  0.0  False  100.0  14:03:35
+1   19900.0   500  200.0  0.0  BU  6200.0  0.0  False -100.0  13:51:03
+2   20000.0   100  300.0  0.0  BU  5700.0  0.0  False    0.0  13:45:05
+3   20000.0   500  300.0  0.0  BU  5600.0  0.0  False  100.0  11:29:57
+4   19900.0   500  200.0  0.0  BU  5100.0  0.0  False    0.0  11:10:05
+5   19900.0  1000  200.0  0.0  BU  4600.0  0.0  False  100.0  11:02:15
+6   19800.0  1500  100.0  0.0  BU  3600.0  0.0  False    0.0  10:40:53
+7   19800.0  1100  100.0  0.0  BU  2100.0  0.0  False    0.0  10:35:19
+8   19800.0   100  100.0  0.0  BU  1000.0  0.0  False    0.0  10:33:31
+9   19800.0   100  100.0  0.0  BU   900.0  0.0  False    0.0  10:31:28
+10  19800.0   600  100.0  0.0  BU   800.0  0.0  False    0.0  10:28:17
+11  19800.0   100  100.0  0.0  BU   200.0  0.0  False  100.0  10:13:43
+12  19700.0   100    0.0  0.0  BU   100.0  0.0  False    0.0  09:27:41, Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba   sa     hl    pcp         t
+0  19300.0  100 -100.0  0.0  BU  500.0  0.0  False  100.0  13:56:51
+1  19200.0  100 -200.0  0.0  BU  400.0  0.0  False  400.0  13:41:48
+2  18800.0  200 -600.0  0.0  BU  300.0  0.0  False -200.0  10:14:46
+3  19000.0  100 -400.0  0.0  BU  100.0  0.0  False    0.0  10:14:24, Empty DataFrame
+Columns: []
+Index: [],           p    v      cp  rcp   a     ba   sa     hl  pcp         t
+0  112000.0  100  1000.0  0.0  BU  100.0  0.0  False  0.0  10:41:37, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a   ba     sa     hl  pcp         t
+0  26700.0  100  200.0  0.0  SD  0.0  200.0  False  0.0  09:50:36
+1  26700.0  100  200.0  0.0  SD  0.0  100.0  False  0.0  09:48:19,          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  13500.0  100  500.0  0.0  BU  100.0  0.0  False  0.0  09:33:09, Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  12300.0  100  200.0  0.0  BU  100.0  0.0  False  0.0  09:28:18,         p    v     cp  rcp   a     ba     sa     hl  pcp         t
+0  8900.0  400 -700.0 -0.1  SD  600.0  500.0  False  0.0  11:23:47
+1  8900.0  600 -700.0 -0.1  BU  600.0  100.0  False  0.0  11:18:41
+2  8900.0  100 -700.0 -0.1  SD    0.0  100.0  False  0.0  10:27:38, Empty DataFrame
+Columns: []
+Index: [],           p    v      cp  rcp   a     ba   sa     hl    pcp         t
+0  190000.0  100 -1000.0  0.0  BU  600.0  0.0  False    0.0  13:49:07
+1  190000.0  100 -1000.0  0.0  BU  500.0  0.0  False -100.0  13:49:07
+2  190100.0  100  -900.0  0.0  BU  400.0  0.0  False -100.0  13:49:07
+3  190200.0  100  -800.0  0.0  BU  300.0  0.0  False -300.0  13:49:07
+4  190500.0  100  -500.0  0.0  BU  200.0  0.0  False    0.0  13:49:07
+5  190500.0  100  -500.0  0.0  BU  100.0  0.0  False    0.0  13:09:55,          p     v     cp  rcp   a      ba      sa     hl    pcp         t
+0  24200.0  2900 -400.0  0.0  SD  1000.0  4100.0  False -100.0  13:13:24
+1  24300.0   100 -300.0  0.0  SD  1000.0  1200.0  False    0.0  13:12:14
+2  24300.0  1100 -300.0  0.0  SD  1000.0  1100.0  False -300.0  13:11:36
+3  24600.0  1000    0.0  0.0  BU  1000.0     0.0  False    0.0  11:12:49, Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  20800.0  200  200.0  0.0  BU  200.0  0.0  False  0.0  10:36:28, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  10700.0   100 -100.0  0.0  SD  200.0  4000.0  False    0.0  14:09:06
+1  10700.0  3500 -100.0  0.0  SD  200.0  3900.0  False -400.0  13:00:01
+2  11100.0   200  300.0  0.0  BU  200.0   400.0  False  300.0  13:00:00
+3  10800.0   300    0.0  0.0  SD    0.0   400.0  False    0.0  11:06:17
+4  10800.0   100    0.0  0.0  SD    0.0   100.0  False    0.0  10:54:26,         p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  8100.0  1300 -200.0  0.0  SD  600.0  1700.0  False    0.0  13:37:39
+1  8100.0   100 -200.0  0.0  SD  600.0   400.0  False    0.0  13:33:15
+2  8100.0   100 -200.0  0.0  SD  600.0   300.0  False    0.0  13:15:30
+3  8100.0   200 -200.0  0.0  SD  600.0   200.0  False    0.0  11:18:00
+4  8100.0   100 -200.0  0.0  BU  600.0     0.0  False -200.0  11:13:26
+5  8300.0   500    0.0  0.0  BU  500.0     0.0  False    0.0  10:34:10,          p    v   cp  rcp   a     ba   sa     hl  pcp         t
+0  10200.0  600  0.0  0.0  BU  700.0  0.0  False  0.0  11:25:12
+1  10200.0  100  0.0  0.0  BU  100.0  0.0  False  0.0  11:23:22,          p     v     cp  rcp   a      ba   sa     hl  pcp         t
+0  23000.0  1000 -200.0  0.0  BU  1200.0  0.0  False  0.0  13:38:06
+1  23000.0   200 -200.0  0.0  BU   200.0  0.0  False  0.0  09:38:02, Empty DataFrame
+Columns: []
+Index: [],          p    v     cp  rcp   a     ba   sa     hl    pcp         t
+0  11400.0  300  300.0  0.0  BU  500.0  0.0  False  100.0  10:21:45
+1  11300.0  200  200.0  0.0  BU  200.0  0.0  False    0.0  10:21:15,          p     v   cp  rcp   a      ba   sa     hl  pcp         t
+0  11000.0  2500  0.0  0.0  BU  4900.0  0.0  False  0.0  09:39:59
+1  11000.0  2400  0.0  0.0  BU  2400.0  0.0  False  0.0  09:22:45,          p     v     cp  rcp   a      ba   sa     hl    pcp         t
+0  17700.0  1600    0.0  0.0  BU  2200.0  0.0  False -200.0  13:38:56
+1  17900.0   500  200.0  0.0  BU   600.0  0.0  False  100.0  09:56:03
+2  17800.0   100  100.0  0.0  BU   100.0  0.0  False    0.0  09:54:07, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  27000.0   200 -100.0  0.0  SD  300.0  2500.0  False    0.0  13:15:46
+1  27000.0  2000 -100.0  0.0  SD  300.0  2300.0  False -100.0  13:15:32
+2  27100.0   300    0.0  0.0  SD  300.0   300.0  False    0.0  09:47:31
+3  27100.0   300    0.0  0.0  BU  300.0     0.0  False    0.0  09:07:13]
+[2023-09-28T14:09:19.772+0700] {logging_mixin.py:151} INFO - hello
+[2023-09-28T14:09:19.773+0700] {logging_mixin.py:151} INFO - 50
+[2023-09-28T14:09:19.773+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/50 [00:00<?, ?it/s]
+[2023-09-28T14:09:19.774+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:19.774+0700] {logging_mixin.py:151} INFO - ASG is empty
+[2023-09-28T14:09:19.779+0700] {logging_mixin.py:151} INFO -          p    v      cp  rcp   a   ba     sa     hl  pcp         t
+0  50200.0  100 -4600.0 -0.1  SD  0.0  100.0  False  0.0  09:00:13
+[2023-09-28T14:09:19.787+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:21.128+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:21.132+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:21.429+0700] {logging_mixin.py:151} WARNING -   4%|4         | 2/50 [00:01<00:39,  1.21it/s]
+[2023-09-28T14:09:21.429+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:21.430+0700] {logging_mixin.py:151} INFO - BCF is empty
+[2023-09-28T14:09:21.430+0700] {logging_mixin.py:151} INFO - BSA is empty
+[2023-09-28T14:09:21.431+0700] {logging_mixin.py:151} INFO - BSH is empty
+[2023-09-28T14:09:21.431+0700] {logging_mixin.py:151} INFO - DHB is empty
+[2023-09-28T14:09:21.432+0700] {logging_mixin.py:151} INFO - DP2 is empty
+[2023-09-28T14:09:21.433+0700] {logging_mixin.py:151} INFO - DSG is empty
+[2023-09-28T14:09:21.439+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba     sa     hl    pcp         t
+0  10700.0  200    0.0  0.0  BU  400.0  100.0  False    0.0  14:03:06
+1  10700.0  100    0.0  0.0  BU  200.0  100.0  False    0.0  13:35:59
+2  10700.0  100    0.0  0.0  SD  100.0  100.0  False -200.0  10:40:12
+3  10900.0  100  200.0  0.0  BU  100.0    0.0  False    0.0  09:57:39
+[2023-09-28T14:09:21.446+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:21.562+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:21.562+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:21.637+0700] {logging_mixin.py:151} WARNING -  18%|#8        | 9/50 [00:01<00:06,  6.15it/s]
+[2023-09-28T14:09:21.637+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:21.638+0700] {logging_mixin.py:151} INFO - EIC is empty
+[2023-09-28T14:09:21.638+0700] {logging_mixin.py:151} INFO - GTS is empty
+[2023-09-28T14:09:21.639+0700] {logging_mixin.py:151} INFO - HRC is empty
+[2023-09-28T14:09:21.639+0700] {logging_mixin.py:151} INFO - HSA is empty
+[2023-09-28T14:09:21.640+0700] {logging_mixin.py:151} INFO - HSM is empty
+[2023-09-28T14:09:21.640+0700] {logging_mixin.py:151} INFO - IFS is empty
+[2023-09-28T14:09:21.651+0700] {logging_mixin.py:151} INFO -           p     v     cp  rcp   a      ba   sa     hl    pcp         t
+0   20000.0   100  300.0  0.0  BU  6300.0  0.0  False  100.0  14:03:35
+1   19900.0   500  200.0  0.0  BU  6200.0  0.0  False -100.0  13:51:03
+2   20000.0   100  300.0  0.0  BU  5700.0  0.0  False    0.0  13:45:05
+3   20000.0   500  300.0  0.0  BU  5600.0  0.0  False  100.0  11:29:57
+4   19900.0   500  200.0  0.0  BU  5100.0  0.0  False    0.0  11:10:05
+5   19900.0  1000  200.0  0.0  BU  4600.0  0.0  False  100.0  11:02:15
+6   19800.0  1500  100.0  0.0  BU  3600.0  0.0  False    0.0  10:40:53
+7   19800.0  1100  100.0  0.0  BU  2100.0  0.0  False    0.0  10:35:19
+8   19800.0   100  100.0  0.0  BU  1000.0  0.0  False    0.0  10:33:31
+9   19800.0   100  100.0  0.0  BU   900.0  0.0  False    0.0  10:31:28
+10  19800.0   600  100.0  0.0  BU   800.0  0.0  False    0.0  10:28:17
+11  19800.0   100  100.0  0.0  BU   200.0  0.0  False  100.0  10:13:43
+12  19700.0   100    0.0  0.0  BU   100.0  0.0  False    0.0  09:27:41
+[2023-09-28T14:09:21.658+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:21.779+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:21.780+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:21.989+0700] {logging_mixin.py:151} WARNING -  32%|###2      | 16/50 [00:02<00:03,  9.84it/s]
+[2023-09-28T14:09:21.990+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:21.990+0700] {logging_mixin.py:151} INFO - MKP is empty
+[2023-09-28T14:09:21.998+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba   sa     hl    pcp         t
+0  19300.0  100 -100.0  0.0  BU  500.0  0.0  False  100.0  13:56:51
+1  19200.0  100 -200.0  0.0  BU  400.0  0.0  False  400.0  13:41:48
+2  18800.0  200 -600.0  0.0  BU  300.0  0.0  False -200.0  10:14:46
+3  19000.0  100 -400.0  0.0  BU  100.0  0.0  False    0.0  10:14:24
+[2023-09-28T14:09:22.004+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:22.123+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:22.123+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:22.216+0700] {logging_mixin.py:151} INFO - NAW is empty
+[2023-09-28T14:09:22.217+0700] {logging_mixin.py:151} WARNING -  38%|###8      | 19/50 [00:02<00:02, 10.51it/s]
+[2023-09-28T14:09:22.218+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:22.224+0700] {logging_mixin.py:151} INFO -           p    v      cp  rcp   a     ba   sa     hl  pcp         t
+0  112000.0  100  1000.0  0.0  BU  100.0  0.0  False  0.0  10:41:37
+[2023-09-28T14:09:22.230+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:22.354+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:22.355+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:22.431+0700] {logging_mixin.py:151} INFO - PJC is empty
+[2023-09-28T14:09:22.432+0700] {logging_mixin.py:151} WARNING -  42%|####2     | 21/50 [00:02<00:02, 10.25it/s]
+[2023-09-28T14:09:22.433+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:22.434+0700] {logging_mixin.py:151} INFO - PNP is empty
+[2023-09-28T14:09:22.434+0700] {logging_mixin.py:151} INFO - PVX is empty
+[2023-09-28T14:09:22.435+0700] {logging_mixin.py:151} INFO - SAF is empty
+[2023-09-28T14:09:22.435+0700] {logging_mixin.py:151} INFO - SC5 is empty
+[2023-09-28T14:09:22.441+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a   ba     sa     hl  pcp         t
+0  26700.0  100  200.0  0.0  SD  0.0  200.0  False  0.0  09:50:36
+1  26700.0  100  200.0  0.0  SD  0.0  100.0  False  0.0  09:48:19
+[2023-09-28T14:09:22.447+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:22.567+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:22.568+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:22.652+0700] {logging_mixin.py:151} WARNING -  52%|#####2    | 26/50 [00:02<00:01, 13.20it/s]
+[2023-09-28T14:09:22.652+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:22.657+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  13500.0  100  500.0  0.0  BU  100.0  0.0  False  0.0  09:33:09
+[2023-09-28T14:09:22.664+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:22.917+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:22.918+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:22.993+0700] {logging_mixin.py:151} INFO - SQC is empty
+[2023-09-28T14:09:22.994+0700] {logging_mixin.py:151} WARNING -  56%|#####6    | 28/50 [00:03<00:02, 10.66it/s]
+[2023-09-28T14:09:22.995+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:23.004+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  12300.0  100  200.0  0.0  BU  100.0  0.0  False  0.0  09:28:18
+[2023-09-28T14:09:23.009+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:23.115+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:23.116+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:23.196+0700] {logging_mixin.py:151} INFO -         p    v     cp  rcp   a     ba     sa     hl  pcp         t
+0  8900.0  400 -700.0 -0.1  SD  600.0  500.0  False  0.0  11:23:47
+1  8900.0  600 -700.0 -0.1  BU  600.0  100.0  False  0.0  11:18:41
+2  8900.0  100 -700.0 -0.1  SD    0.0  100.0  False  0.0  10:27:38
+[2023-09-28T14:09:23.202+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:23.324+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:23.325+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:23.395+0700] {logging_mixin.py:151} WARNING -  60%|######    | 30/50 [00:03<00:02,  8.59it/s]
+[2023-09-28T14:09:23.395+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:23.396+0700] {logging_mixin.py:151} INFO - TVC is empty
+[2023-09-28T14:09:23.402+0700] {logging_mixin.py:151} INFO -           p    v      cp  rcp   a     ba   sa     hl    pcp         t
+0  190000.0  100 -1000.0  0.0  BU  600.0  0.0  False    0.0  13:49:07
+1  190000.0  100 -1000.0  0.0  BU  500.0  0.0  False -100.0  13:49:07
+2  190100.0  100  -900.0  0.0  BU  400.0  0.0  False -100.0  13:49:07
+3  190200.0  100  -800.0  0.0  BU  300.0  0.0  False -300.0  13:49:07
+4  190500.0  100  -500.0  0.0  BU  200.0  0.0  False    0.0  13:49:07
+5  190500.0  100  -500.0  0.0  BU  100.0  0.0  False    0.0  13:09:55
+[2023-09-28T14:09:23.413+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:23.538+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:23.539+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:23.743+0700] {logging_mixin.py:151} WARNING -  64%|######4   | 32/50 [00:03<00:02,  7.70it/s]
+[2023-09-28T14:09:23.744+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:23.749+0700] {logging_mixin.py:151} INFO -          p     v     cp  rcp   a      ba      sa     hl    pcp         t
+0  24200.0  2900 -400.0  0.0  SD  1000.0  4100.0  False -100.0  13:13:24
+1  24300.0   100 -300.0  0.0  SD  1000.0  1200.0  False    0.0  13:12:14
+2  24300.0  1100 -300.0  0.0  SD  1000.0  1100.0  False -300.0  13:11:36
+3  24600.0  1000    0.0  0.0  BU  1000.0     0.0  False    0.0  11:12:49
+[2023-09-28T14:09:23.754+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:23.852+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:23.853+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:23.918+0700] {logging_mixin.py:151} WARNING -  66%|######6   | 33/50 [00:04<00:02,  7.34it/s]
+[2023-09-28T14:09:23.919+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:23.919+0700] {logging_mixin.py:151} INFO - VSI is empty
+[2023-09-28T14:09:23.925+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba   sa     hl  pcp         t
+0  20800.0  200  200.0  0.0  BU  200.0  0.0  False  0.0  10:36:28
+[2023-09-28T14:09:23.930+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:24.030+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:24.030+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:24.101+0700] {logging_mixin.py:151} WARNING -  70%|#######   | 35/50 [00:04<00:01,  8.11it/s]
+[2023-09-28T14:09:24.102+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:24.102+0700] {logging_mixin.py:151} INFO - WCS is empty
+[2023-09-28T14:09:24.103+0700] {logging_mixin.py:151} INFO - XDH is empty
+[2023-09-28T14:09:24.103+0700] {logging_mixin.py:151} INFO - YBC is empty
+[2023-09-28T14:09:24.110+0700] {logging_mixin.py:151} INFO -          p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  10700.0   100 -100.0  0.0  SD  200.0  4000.0  False    0.0  14:09:06
+1  10700.0  3500 -100.0  0.0  SD  200.0  3900.0  False -400.0  13:00:01
+2  11100.0   200  300.0  0.0  BU  200.0   400.0  False  300.0  13:00:00
+3  10800.0   300    0.0  0.0  SD    0.0   400.0  False    0.0  11:06:17
+4  10800.0   100    0.0  0.0  SD    0.0   100.0  False    0.0  10:54:26
+[2023-09-28T14:09:24.116+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:24.227+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:24.228+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:24.302+0700] {logging_mixin.py:151} WARNING -  78%|#######8  | 39/50 [00:04<00:00, 11.08it/s]
+[2023-09-28T14:09:24.303+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:24.310+0700] {logging_mixin.py:151} INFO -         p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  8100.0  1300 -200.0  0.0  SD  600.0  1700.0  False    0.0  13:37:39
+1  8100.0   100 -200.0  0.0  SD  600.0   400.0  False    0.0  13:33:15
+2  8100.0   100 -200.0  0.0  SD  600.0   300.0  False    0.0  13:15:30
+3  8100.0   200 -200.0  0.0  SD  600.0   200.0  False    0.0  11:18:00
+4  8100.0   100 -200.0  0.0  BU  600.0     0.0  False -200.0  11:13:26
+5  8300.0   500    0.0  0.0  BU  500.0     0.0  False    0.0  10:34:10
+[2023-09-28T14:09:24.316+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:24.435+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:24.436+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:24.514+0700] {logging_mixin.py:151} INFO -          p    v   cp  rcp   a     ba   sa     hl  pcp         t
+0  10200.0  600  0.0  0.0  BU  700.0  0.0  False  0.0  11:25:12
+1  10200.0  100  0.0  0.0  BU  100.0  0.0  False  0.0  11:23:22
+[2023-09-28T14:09:24.520+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:24.635+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:24.636+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:24.893+0700] {logging_mixin.py:151} WARNING -  82%|########2 | 41/50 [00:05<00:01,  7.12it/s]
+[2023-09-28T14:09:24.894+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:24.900+0700] {logging_mixin.py:151} INFO -          p     v     cp  rcp   a      ba   sa     hl  pcp         t
+0  23000.0  1000 -200.0  0.0  BU  1200.0  0.0  False  0.0  13:38:06
+1  23000.0   200 -200.0  0.0  BU   200.0  0.0  False  0.0  09:38:02
+[2023-09-28T14:09:24.906+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:25.028+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:25.029+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:25.101+0700] {logging_mixin.py:151} WARNING -  84%|########4 | 42/50 [00:05<00:01,  6.65it/s]
+[2023-09-28T14:09:25.102+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:25.103+0700] {logging_mixin.py:151} INFO - BTW is empty
+[2023-09-28T14:09:25.111+0700] {logging_mixin.py:151} INFO -          p    v     cp  rcp   a     ba   sa     hl    pcp         t
+0  11400.0  300  300.0  0.0  BU  500.0  0.0  False  100.0  10:21:45
+1  11300.0  200  200.0  0.0  BU  200.0  0.0  False    0.0  10:21:15
+[2023-09-28T14:09:25.119+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:25.253+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:25.256+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:25.326+0700] {logging_mixin.py:151} WARNING -  88%|########8 | 44/50 [00:05<00:00,  7.19it/s]
+[2023-09-28T14:09:25.326+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:25.332+0700] {logging_mixin.py:151} INFO -          p     v   cp  rcp   a      ba   sa     hl  pcp         t
+0  11000.0  2500  0.0  0.0  BU  4900.0  0.0  False  0.0  09:39:59
+1  11000.0  2400  0.0  0.0  BU  2400.0  0.0  False  0.0  09:22:45
+[2023-09-28T14:09:25.338+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:25.447+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:25.448+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:25.530+0700] {logging_mixin.py:151} WARNING -  90%|######### | 45/50 [00:05<00:00,  6.64it/s]
+[2023-09-28T14:09:25.531+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:25.537+0700] {logging_mixin.py:151} INFO -          p     v     cp  rcp   a      ba   sa     hl    pcp         t
+0  17700.0  1600    0.0  0.0  BU  2200.0  0.0  False -200.0  13:38:56
+1  17900.0   500  200.0  0.0  BU   600.0  0.0  False  100.0  09:56:03
+2  17800.0   100  100.0  0.0  BU   100.0  0.0  False    0.0  09:54:07
+[2023-09-28T14:09:25.545+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:25.781+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:25.782+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:25.852+0700] {logging_mixin.py:151} WARNING -  92%|#########2| 46/50 [00:06<00:00,  5.41it/s]
+[2023-09-28T14:09:25.853+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:25.853+0700] {logging_mixin.py:151} INFO - CMF is empty
+[2023-09-28T14:09:25.854+0700] {logging_mixin.py:151} INFO - CTW is empty
+[2023-09-28T14:09:25.854+0700] {logging_mixin.py:151} INFO - DFF is empty
+[2023-09-28T14:09:25.861+0700] {logging_mixin.py:151} INFO -          p     v     cp  rcp   a     ba      sa     hl    pcp         t
+0  27000.0   200 -100.0  0.0  SD  300.0  2500.0  False    0.0  13:15:46
+1  27000.0  2000 -100.0  0.0  SD  300.0  2300.0  False -100.0  13:15:32
+2  27100.0   300    0.0  0.0  SD  300.0   300.0  False    0.0  09:47:31
+3  27100.0   300    0.0  0.0  BU  300.0     0.0  False    0.0  09:07:13
+[2023-09-28T14:09:25.867+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:09:25.981+0700] {base.py:73} INFO - Using connection ID 'minio_s3_conn' for task execution.
+[2023-09-28T14:09:25.981+0700] {connection_wrapper.py:340} INFO - AWS Connection (conn_id='minio_s3_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-09-28T14:09:26.052+0700] {logging_mixin.py:151} WARNING - 100%|##########| 50/50 [00:06<00:00,  8.86it/s]
+[2023-09-28T14:09:26.053+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:26.053+0700] {logging_mixin.py:151} WARNING - 100%|##########| 50/50 [00:06<00:00,  7.96it/s]
+[2023-09-28T14:09:26.054+0700] {logging_mixin.py:151} INFO - chay lan 1
+[2023-09-28T14:09:26.055+0700] {logging_mixin.py:151} INFO - Took 10.77 s
+[2023-09-28T14:09:26.055+0700] {logging_mixin.py:151} WARNING -   8%|7         | 1/13 [00:10<02:09, 10.77s/it]
+[2023-09-28T14:09:26.056+0700] {logging_mixin.py:151} INFO - ['DWS', 'HC3', 'HJS', 'HNA', 'HNF', 'HTL', 'LM8', 'MDF', 'MH3', 'MVN', 'NCS', 'NTH', 'PAC', 'PGI', 'PTI', 'SGI', 'SID', 'SLS', 'SRC', 'SWC', 'TBD', 'TPC', 'TV3', 'TYA', 'VFC', 'VFG', 'VGR', 'VIT', 'VNC', 'XHC', 'EMS', 'HUG', 'IST', 'NBW', 'PCT', 'SSC', 'TIX', 'AST', 'FOC', 'LIX', 'NET', 'SBL', 'VDP', 'VNF', 'HWS', 'MAS', 'NST', 'SMA', 'YBM', 'BWS']
+[2023-09-28T14:09:27.897+0700] {logging_mixin.py:151} INFO - [Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: []]
+[2023-09-28T14:09:27.898+0700] {logging_mixin.py:151} INFO - hello
+[2023-09-28T14:09:27.899+0700] {logging_mixin.py:151} INFO - 50
+[2023-09-28T14:09:27.900+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/50 [00:00<?, ?it/s]
+[2023-09-28T14:09:27.900+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:27.901+0700] {logging_mixin.py:151} INFO - ASG is empty
+[2023-09-28T14:09:27.901+0700] {logging_mixin.py:151} INFO - BAX is empty
+[2023-09-28T14:09:27.902+0700] {logging_mixin.py:151} INFO - BCF is empty
+[2023-09-28T14:09:27.902+0700] {logging_mixin.py:151} INFO - BSA is empty
+[2023-09-28T14:09:27.903+0700] {logging_mixin.py:151} INFO - BSH is empty
+[2023-09-28T14:09:27.903+0700] {logging_mixin.py:151} INFO - DHB is empty
+[2023-09-28T14:09:27.904+0700] {logging_mixin.py:151} INFO - DP2 is empty
+[2023-09-28T14:09:27.904+0700] {logging_mixin.py:151} INFO - DSG is empty
+[2023-09-28T14:09:27.905+0700] {logging_mixin.py:151} INFO - DTK is empty
+[2023-09-28T14:09:27.905+0700] {logging_mixin.py:151} INFO - EIC is empty
+[2023-09-28T14:09:27.906+0700] {logging_mixin.py:151} INFO - GTS is empty
+[2023-09-28T14:09:27.906+0700] {logging_mixin.py:151} INFO - HRC is empty
+[2023-09-28T14:09:27.907+0700] {logging_mixin.py:151} INFO - HSA is empty
+[2023-09-28T14:09:27.908+0700] {logging_mixin.py:151} INFO - HSM is empty
+[2023-09-28T14:09:27.908+0700] {logging_mixin.py:151} INFO - IFS is empty
+[2023-09-28T14:09:27.908+0700] {logging_mixin.py:151} INFO - ISH is empty
+[2023-09-28T14:09:27.909+0700] {logging_mixin.py:151} INFO - MKP is empty
+[2023-09-28T14:09:27.909+0700] {logging_mixin.py:151} INFO - MVB is empty
+[2023-09-28T14:09:27.910+0700] {logging_mixin.py:151} INFO - NAW is empty
+[2023-09-28T14:09:27.910+0700] {logging_mixin.py:151} INFO - PDN is empty
+[2023-09-28T14:09:27.911+0700] {logging_mixin.py:151} INFO - PJC is empty
+[2023-09-28T14:09:27.911+0700] {logging_mixin.py:151} INFO - PNP is empty
+[2023-09-28T14:09:27.912+0700] {logging_mixin.py:151} INFO - PVX is empty
+[2023-09-28T14:09:27.912+0700] {logging_mixin.py:151} INFO - SAF is empty
+[2023-09-28T14:09:27.913+0700] {logging_mixin.py:151} INFO - SC5 is empty
+[2023-09-28T14:09:27.913+0700] {logging_mixin.py:151} INFO - SGH is empty
+[2023-09-28T14:09:27.914+0700] {logging_mixin.py:151} INFO - SJG is empty
+[2023-09-28T14:09:27.914+0700] {logging_mixin.py:151} INFO - SQC is empty
+[2023-09-28T14:09:27.915+0700] {logging_mixin.py:151} INFO - SZE is empty
+[2023-09-28T14:09:27.915+0700] {logging_mixin.py:151} INFO - TTL is empty
+[2023-09-28T14:09:27.916+0700] {logging_mixin.py:151} INFO - TVC is empty
+[2023-09-28T14:09:27.916+0700] {logging_mixin.py:151} INFO - VCF is empty
+[2023-09-28T14:09:27.916+0700] {logging_mixin.py:151} INFO - VRG is empty
+[2023-09-28T14:09:27.917+0700] {logging_mixin.py:151} INFO - VSI is empty
+[2023-09-28T14:09:27.917+0700] {logging_mixin.py:151} INFO - VSN is empty
+[2023-09-28T14:09:27.918+0700] {logging_mixin.py:151} INFO - WCS is empty
+[2023-09-28T14:09:27.918+0700] {logging_mixin.py:151} INFO - XDH is empty
+[2023-09-28T14:09:27.918+0700] {logging_mixin.py:151} INFO - YBC is empty
+[2023-09-28T14:09:27.919+0700] {logging_mixin.py:151} INFO - APC is empty
+[2023-09-28T14:09:27.919+0700] {logging_mixin.py:151} INFO - AME is empty
+[2023-09-28T14:09:27.920+0700] {logging_mixin.py:151} INFO - BSP is empty
+[2023-09-28T14:09:27.920+0700] {logging_mixin.py:151} INFO - BSQ is empty
+[2023-09-28T14:09:27.921+0700] {logging_mixin.py:151} INFO - BTW is empty
+[2023-09-28T14:09:27.921+0700] {logging_mixin.py:151} INFO - CCR is empty
+[2023-09-28T14:09:27.922+0700] {logging_mixin.py:151} INFO - CDP is empty
+[2023-09-28T14:09:27.922+0700] {logging_mixin.py:151} INFO - CMD is empty
+[2023-09-28T14:09:27.922+0700] {logging_mixin.py:151} INFO - CMF is empty
+[2023-09-28T14:09:27.923+0700] {logging_mixin.py:151} INFO - CTW is empty
+[2023-09-28T14:09:27.923+0700] {logging_mixin.py:151} INFO - DFF is empty
+[2023-09-28T14:09:27.924+0700] {logging_mixin.py:151} INFO - DP1 is empty
+[2023-09-28T14:09:27.924+0700] {logging_mixin.py:151} WARNING - 100%|##########| 50/50 [00:00<00:00, 2113.94it/s]
+[2023-09-28T14:09:27.925+0700] {logging_mixin.py:151} INFO - chay lan 2
+[2023-09-28T14:09:27.925+0700] {logging_mixin.py:151} INFO - Took 1.87 s
+[2023-09-28T14:09:27.926+0700] {logging_mixin.py:151} WARNING -  15%|#5        | 2/13 [00:12<01:00,  5.54s/it]
+[2023-09-28T14:09:27.926+0700] {logging_mixin.py:151} INFO - ['CBI', 'HTI', 'RDP', 'VMC', 'VPS', 'CCI', 'CLC', 'GMC', 'HBC', 'HVN', 'POT', 'TVB', 'ADG', 'DRG', 'MML', 'NSC', 'PGD', 'PGS', 'POS', 'TDP', 'UIC', 'SZB', 'VET', 'PSP', 'VHL', 'ABT', 'CDN', 'EID', 'FCS', 'HVT', 'RTB', 'SEA', 'SHP', 'SMB', 'VCR', 'VIN', 'AGP', 'CAV', 'PDV', 'PMC', 'SAS', 'TDM', 'VMD', 'PRT', 'SJE', 'TCT', 'V21', 'VBB', 'BSG', 'TRA']
+[2023-09-28T14:09:29.733+0700] {logging_mixin.py:151} INFO - [Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: []]
+[2023-09-28T14:09:29.735+0700] {logging_mixin.py:151} INFO - hello
+[2023-09-28T14:09:29.735+0700] {logging_mixin.py:151} INFO - 50
+[2023-09-28T14:09:29.736+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/50 [00:00<?, ?it/s]
+[2023-09-28T14:09:29.737+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:29.737+0700] {logging_mixin.py:151} INFO - ASG is empty
+[2023-09-28T14:09:29.738+0700] {logging_mixin.py:151} INFO - BAX is empty
+[2023-09-28T14:09:29.738+0700] {logging_mixin.py:151} INFO - BCF is empty
+[2023-09-28T14:09:29.739+0700] {logging_mixin.py:151} INFO - BSA is empty
+[2023-09-28T14:09:29.739+0700] {logging_mixin.py:151} INFO - BSH is empty
+[2023-09-28T14:09:29.740+0700] {logging_mixin.py:151} INFO - DHB is empty
+[2023-09-28T14:09:29.740+0700] {logging_mixin.py:151} INFO - DP2 is empty
+[2023-09-28T14:09:29.740+0700] {logging_mixin.py:151} INFO - DSG is empty
+[2023-09-28T14:09:29.741+0700] {logging_mixin.py:151} INFO - DTK is empty
+[2023-09-28T14:09:29.741+0700] {logging_mixin.py:151} INFO - EIC is empty
+[2023-09-28T14:09:29.742+0700] {logging_mixin.py:151} INFO - GTS is empty
+[2023-09-28T14:09:29.742+0700] {logging_mixin.py:151} INFO - HRC is empty
+[2023-09-28T14:09:29.742+0700] {logging_mixin.py:151} INFO - HSA is empty
+[2023-09-28T14:09:29.743+0700] {logging_mixin.py:151} INFO - HSM is empty
+[2023-09-28T14:09:29.743+0700] {logging_mixin.py:151} INFO - IFS is empty
+[2023-09-28T14:09:29.744+0700] {logging_mixin.py:151} INFO - ISH is empty
+[2023-09-28T14:09:29.744+0700] {logging_mixin.py:151} INFO - MKP is empty
+[2023-09-28T14:09:29.745+0700] {logging_mixin.py:151} INFO - MVB is empty
+[2023-09-28T14:09:29.745+0700] {logging_mixin.py:151} INFO - NAW is empty
+[2023-09-28T14:09:29.745+0700] {logging_mixin.py:151} INFO - PDN is empty
+[2023-09-28T14:09:29.746+0700] {logging_mixin.py:151} INFO - PJC is empty
+[2023-09-28T14:09:29.746+0700] {logging_mixin.py:151} INFO - PNP is empty
+[2023-09-28T14:09:29.747+0700] {logging_mixin.py:151} INFO - PVX is empty
+[2023-09-28T14:09:29.747+0700] {logging_mixin.py:151} INFO - SAF is empty
+[2023-09-28T14:09:29.747+0700] {logging_mixin.py:151} INFO - SC5 is empty
+[2023-09-28T14:09:29.748+0700] {logging_mixin.py:151} INFO - SGH is empty
+[2023-09-28T14:09:29.748+0700] {logging_mixin.py:151} INFO - SJG is empty
+[2023-09-28T14:09:29.749+0700] {logging_mixin.py:151} INFO - SQC is empty
+[2023-09-28T14:09:29.749+0700] {logging_mixin.py:151} INFO - SZE is empty
+[2023-09-28T14:09:29.749+0700] {logging_mixin.py:151} INFO - TTL is empty
+[2023-09-28T14:09:29.750+0700] {logging_mixin.py:151} INFO - TVC is empty
+[2023-09-28T14:09:29.750+0700] {logging_mixin.py:151} INFO - VCF is empty
+[2023-09-28T14:09:29.751+0700] {logging_mixin.py:151} INFO - VRG is empty
+[2023-09-28T14:09:29.751+0700] {logging_mixin.py:151} INFO - VSI is empty
+[2023-09-28T14:09:29.752+0700] {logging_mixin.py:151} INFO - VSN is empty
+[2023-09-28T14:09:29.752+0700] {logging_mixin.py:151} INFO - WCS is empty
+[2023-09-28T14:09:29.752+0700] {logging_mixin.py:151} INFO - XDH is empty
+[2023-09-28T14:09:29.753+0700] {logging_mixin.py:151} INFO - YBC is empty
+[2023-09-28T14:09:29.753+0700] {logging_mixin.py:151} INFO - APC is empty
+[2023-09-28T14:09:29.754+0700] {logging_mixin.py:151} INFO - AME is empty
+[2023-09-28T14:09:29.754+0700] {logging_mixin.py:151} INFO - BSP is empty
+[2023-09-28T14:09:29.754+0700] {logging_mixin.py:151} INFO - BSQ is empty
+[2023-09-28T14:09:29.755+0700] {logging_mixin.py:151} INFO - BTW is empty
+[2023-09-28T14:09:29.755+0700] {logging_mixin.py:151} INFO - CCR is empty
+[2023-09-28T14:09:29.756+0700] {logging_mixin.py:151} INFO - CDP is empty
+[2023-09-28T14:09:29.756+0700] {logging_mixin.py:151} INFO - CMD is empty
+[2023-09-28T14:09:29.756+0700] {logging_mixin.py:151} INFO - CMF is empty
+[2023-09-28T14:09:29.757+0700] {logging_mixin.py:151} INFO - CTW is empty
+[2023-09-28T14:09:29.757+0700] {logging_mixin.py:151} INFO - DFF is empty
+[2023-09-28T14:09:29.757+0700] {logging_mixin.py:151} INFO - DP1 is empty
+[2023-09-28T14:09:29.758+0700] {logging_mixin.py:151} WARNING - 100%|##########| 50/50 [00:00<00:00, 2437.95it/s]
+[2023-09-28T14:09:29.758+0700] {logging_mixin.py:151} INFO - chay lan 3
+[2023-09-28T14:09:29.759+0700] {logging_mixin.py:151} INFO - Took 1.83 s
+[2023-09-28T14:09:29.759+0700] {logging_mixin.py:151} WARNING -  23%|##3       | 3/13 [00:14<00:38,  3.84s/it]
+[2023-09-28T14:09:29.759+0700] {logging_mixin.py:151} INFO - ['VNA', 'GSM', 'SHN', 'VCB', 'APF', 'CAG', 'CIA', 'CLH', 'CMV', 'DRL', 'DTL', 'FIC', 'HMC', 'HRT', 'HTV', 'ICT', 'INN', 'KSV', 'LEC', 'NTT', 'OPC', 'PCG', 'PGB', 'SAV', 'SRT', 'SZL', 'TLP', 'TMS', 'TRC', 'TTT', 'VAF', 'VEF', 'VIF', 'VPD', 'BHN', 'CNT', 'HND', 'HTG', 'MTA', 'SFI', 'SJS', 'TV1', 'AAA', 'AAS', 'AAT', 'AAV', 'ABB', 'ABC', 'ABI', 'ABS']
+[2023-09-28T14:09:31.252+0700] {logging_mixin.py:151} INFO - [Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: []]
+[2023-09-28T14:09:31.253+0700] {logging_mixin.py:151} INFO - hello
+[2023-09-28T14:09:31.254+0700] {logging_mixin.py:151} INFO - 50
+[2023-09-28T14:09:31.255+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/50 [00:00<?, ?it/s]
+[2023-09-28T14:09:31.255+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:09:31.256+0700] {logging_mixin.py:151} INFO - ASG is empty
+[2023-09-28T14:09:31.256+0700] {logging_mixin.py:151} INFO - BAX is empty
+[2023-09-28T14:09:31.257+0700] {logging_mixin.py:151} INFO - BCF is empty
+[2023-09-28T14:09:31.257+0700] {logging_mixin.py:151} INFO - BSA is empty
+[2023-09-28T14:09:31.258+0700] {logging_mixin.py:151} INFO - BSH is empty
+[2023-09-28T14:09:31.258+0700] {logging_mixin.py:151} INFO - DHB is empty
+[2023-09-28T14:09:31.258+0700] {logging_mixin.py:151} INFO - DP2 is empty
+[2023-09-28T14:09:31.259+0700] {logging_mixin.py:151} INFO - DSG is empty
+[2023-09-28T14:09:31.259+0700] {logging_mixin.py:151} INFO - DTK is empty
+[2023-09-28T14:09:31.260+0700] {logging_mixin.py:151} INFO - EIC is empty
+[2023-09-28T14:09:31.260+0700] {logging_mixin.py:151} INFO - GTS is empty
+[2023-09-28T14:09:31.260+0700] {logging_mixin.py:151} INFO - HRC is empty
+[2023-09-28T14:09:31.261+0700] {logging_mixin.py:151} INFO - HSA is empty
+[2023-09-28T14:09:31.261+0700] {logging_mixin.py:151} INFO - HSM is empty
+[2023-09-28T14:09:31.262+0700] {logging_mixin.py:151} INFO - IFS is empty
+[2023-09-28T14:09:31.262+0700] {logging_mixin.py:151} INFO - ISH is empty
+[2023-09-28T14:09:31.262+0700] {logging_mixin.py:151} INFO - MKP is empty
+[2023-09-28T14:09:31.263+0700] {logging_mixin.py:151} INFO - MVB is empty
+[2023-09-28T14:09:31.263+0700] {logging_mixin.py:151} INFO - NAW is empty
+[2023-09-28T14:09:31.264+0700] {logging_mixin.py:151} INFO - PDN is empty
+[2023-09-28T14:09:31.264+0700] {logging_mixin.py:151} INFO - PJC is empty
+[2023-09-28T14:09:31.264+0700] {logging_mixin.py:151} INFO - PNP is empty
+[2023-09-28T14:09:31.265+0700] {logging_mixin.py:151} INFO - PVX is empty
+[2023-09-28T14:09:31.265+0700] {logging_mixin.py:151} INFO - SAF is empty
+[2023-09-28T14:09:31.266+0700] {logging_mixin.py:151} INFO - SC5 is empty
+[2023-09-28T14:09:31.266+0700] {logging_mixin.py:151} INFO - SGH is empty
+[2023-09-28T14:09:31.266+0700] {logging_mixin.py:151} INFO - SJG is empty
+[2023-09-28T14:09:31.267+0700] {logging_mixin.py:151} INFO - SQC is empty
+[2023-09-28T14:09:31.267+0700] {logging_mixin.py:151} INFO - SZE is empty
+[2023-09-28T14:09:31.267+0700] {logging_mixin.py:151} INFO - TTL is empty
+[2023-09-28T14:09:31.268+0700] {logging_mixin.py:151} INFO - TVC is empty
+[2023-09-28T14:09:31.268+0700] {logging_mixin.py:151} INFO - VCF is empty
+[2023-09-28T14:09:31.269+0700] {logging_mixin.py:151} INFO - VRG is empty
+[2023-09-28T14:09:31.269+0700] {logging_mixin.py:151} INFO - VSI is empty
+[2023-09-28T14:09:31.269+0700] {logging_mixin.py:151} INFO - VSN is empty
+[2023-09-28T14:09:31.270+0700] {logging_mixin.py:151} INFO - WCS is empty
+[2023-09-28T14:09:31.270+0700] {logging_mixin.py:151} INFO - XDH is empty
+[2023-09-28T14:09:31.270+0700] {logging_mixin.py:151} INFO - YBC is empty
+[2023-09-28T14:09:31.271+0700] {logging_mixin.py:151} INFO - APC is empty
+[2023-09-28T14:09:31.271+0700] {logging_mixin.py:151} INFO - AME is empty
+[2023-09-28T14:09:31.271+0700] {logging_mixin.py:151} INFO - BSP is empty
+[2023-09-28T14:09:31.272+0700] {logging_mixin.py:151} INFO - BSQ is empty
+[2023-09-28T14:09:31.272+0700] {logging_mixin.py:151} INFO - BTW is empty
+[2023-09-28T14:09:31.272+0700] {logging_mixin.py:151} INFO - CCR is empty
+[2023-09-28T14:09:31.273+0700] {logging_mixin.py:151} INFO - CDP is empty
+[2023-09-28T14:09:31.273+0700] {logging_mixin.py:151} INFO - CMD is empty
+[2023-09-28T14:09:31.274+0700] {logging_mixin.py:151} INFO - CMF is empty
+[2023-09-28T14:09:31.275+0700] {logging_mixin.py:151} INFO - CTW is empty
+[2023-09-28T14:09:31.275+0700] {logging_mixin.py:151} INFO - DFF is empty
+[2023-09-28T14:09:31.276+0700] {logging_mixin.py:151} INFO - DP1 is empty
+[2023-09-28T14:09:31.276+0700] {logging_mixin.py:151} WARNING - 100%|##########| 50/50 [00:00<00:00, 2436.31it/s]
+[2023-09-28T14:09:31.277+0700] {logging_mixin.py:151} INFO - chay lan 4
+[2023-09-28T14:09:31.277+0700] {logging_mixin.py:151} INFO - Took 1.52 s
+[2023-09-28T14:09:31.277+0700] {logging_mixin.py:151} WARNING -  31%|###       | 4/13 [00:15<00:26,  2.93s/it]
+[2023-09-28T14:09:31.278+0700] {logging_mixin.py:151} INFO - ['ACB', 'ACC', 'ACG', 'ACL', 'ACV', 'ADS', 'AFX', 'AGG', 'AGR', 'AMS', 'AMV', 'ANV', 'APG', 'APH', 'API', 'APS', 'ASM', 'ASP', 'BAB', 'BAF', 'BCC', 'BCE', 'BCG', 'BCM', 'BDG', 'BDT', 'BFC', 'BIC', 'BID', 'BKG', 'BMC', 'BMI', 'BMP', 'BMS', 'BNA', 'BOT', 'BSI', 'BSR', 'BTP', 'BTS', 'BVB', 'BVH', 'BVS', 'BWE', 'C32', 'C47', 'C4G', 'CAP', 'CC1', 'CCL']
+[2023-09-28T14:10:40.826+0700] {logging_mixin.py:151} INFO - [Empty DataFrame
+Columns: []
+Index: [],           p     v     cp  rcp   a      ba      sa     hl    pcp         t
+0   12050.0   100 -250.0  0.0  BU  3700.0  9100.0  False    0.0  14:03:24
+1   12050.0   900 -250.0  0.0  BU  3600.0  9100.0  False   50.0  14:03:03
+2   12000.0   500 -300.0  0.0  SD  2700.0  9100.0  False    0.0  13:57:02
+3   12000.0   100 -300.0  0.0  SD  2700.0  8600.0  False    0.0  13:57:02
+4   12000.0   200 -300.0  0.0  SD  2700.0  8500.0  False    0.0  13:51:55
+5   12000.0   100 -300.0  0.0  SD  2700.0  8300.0  False    0.0  13:51:55
+6   12000.0   500 -300.0  0.0  SD  2700.0  8200.0  False  -50.0  13:51:16
+7   12050.0   400 -250.0  0.0  BU  2700.0  7700.0  False    0.0  13:34:04
+8   12050.0   100 -250.0  0.0  SD  2300.0  7700.0  False -150.0  13:10:39
+9   12200.0   100 -100.0  0.0  BU  2300.0  7600.0  False  100.0  11:29:18
+10  12100.0   300 -200.0  0.0  BU  2200.0  7600.0  False    0.0  11:29:18
+11  12100.0   100 -200.0  0.0  BU  1900.0  7600.0  False    0.0  11:19:49
+12  12100.0   300 -200.0  0.0  BU  1800.0  7600.0  False    0.0  11:19:37
+13  12100.0   200 -200.0  0.0  BU  1500.0  7600.0  False  100.0  10:57:27
+14  12000.0  1800 -300.0  0.0  SD  1300.0  7600.0  False    0.0  10:49:27
+15  12000.0   200 -300.0  0.0  SD  1300.0  5800.0  False    0.0  10:38:56
+16  12000.0  1000 -300.0  0.0  SD  1300.0  5600.0  False    0.0  10:38:56
+17  12000.0   300 -300.0  0.0  SD  1300.0  4600.0  False    0.0  10:38:56
+18  12000.0   100 -300.0  0.0  SD  1300.0  4300.0  False    0.0  10:38:56
+19  12000.0   100 -300.0  0.0  SD  1300.0  4200.0  False    0.0  10:38:56
+20  12000.0   200 -300.0  0.0  SD  1300.0  4100.0  False -100.0  10:38:56
+21  12100.0   100 -200.0  0.0  BU  1300.0  3900.0  False    0.0  10:36:31
+22  12100.0   200 -200.0  0.0  BU  1200.0  3900.0  False  100.0  10:30:00
+23  12000.0   300 -300.0  0.0  SD  1000.0  3900.0  False  -50.0  10:16:26
+24  12050.0   400 -250.0  0.0  SD  1000.0  3600.0  False    0.0  10:14:24
+25  12050.0   100 -250.0  0.0  SD  1000.0  3200.0  False  -50.0  10:14:24
+26  12100.0   200 -200.0  0.0  SD  1000.0  3100.0  False    0.0  10:00:49
+27  12100.0   100 -200.0  0.0  SD  1000.0  2900.0  False    0.0  10:00:49
+28  12100.0   100 -200.0  0.0  SD  1000.0  2800.0  False  -50.0  10:00:49
+29  12150.0  1000 -150.0  0.0  SD  1000.0  2700.0  False    0.0  10:00:16
+30  12150.0   100 -150.0  0.0  SD  1000.0  1700.0  False  -50.0  10:00:16
+31  12200.0  1500 -100.0  0.0  SD  1000.0  1600.0  False    0.0  09:50:50
+32  12200.0   100 -100.0  0.0  SD  1000.0   100.0  False    0.0  09:50:12
+33  12200.0   400 -100.0  0.0  BU  1000.0     0.0  False    0.0  09:40:26
+34  12200.0   500 -100.0  0.0  BU   600.0     0.0  False    0.0  09:33:24
+35  12200.0   100 -100.0  0.0  BU   100.0     0.0  False -100.0  09:24:36
+36  12300.0   300    0.0  0.0         0.0     0.0  False    0.0  09:15:00, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],           p      v     cp  rcp   a       ba       sa     hl    pcp         t
+0   10300.0   1000  100.0  0.0  BU  36300.0  25000.0  False  100.0  14:10:15
+1   10200.0    200    0.0  0.0  SD  35300.0  25000.0  False -100.0  14:09:04
+2   10300.0    100  100.0  0.0  BU  35300.0  24800.0  False  100.0  14:04:32
+3   10200.0    400    0.0  0.0  SD  35200.0  24800.0  False    0.0  13:54:30
+4   10200.0    200    0.0  0.0  BU  35200.0  24400.0  False    0.0  13:54:28
+5   10200.0    300    0.0  0.0  BU  35000.0  24400.0  False    0.0  13:46:23
+6   10200.0    100    0.0  0.0  BU  34700.0  24400.0  False    0.0  13:41:55
+7   10200.0    100    0.0  0.0  BU  34600.0  24400.0  False    0.0  13:41:21
+8   10200.0   1500    0.0  0.0  BU  34500.0  24400.0  False    0.0  13:39:00
+9   10200.0    200    0.0  0.0  BU  33000.0  24400.0  False    0.0  13:38:51
+10  10200.0    500    0.0  0.0  BU  32800.0  24400.0  False    0.0  13:37:30
+11  10200.0    200    0.0  0.0  BU  32300.0  24400.0  False    0.0  13:35:45
+12  10200.0   1100    0.0  0.0  BU  32100.0  24400.0  False    0.0  13:34:16
+13  10200.0   1700    0.0  0.0  BU  31000.0  24400.0  False    0.0  13:33:59
+14  10200.0    100    0.0  0.0  BU  29300.0  24400.0  False    0.0  13:33:05
+15  10200.0    200    0.0  0.0  BU  29200.0  24400.0  False    0.0  13:25:45
+16  10200.0    200    0.0  0.0  BU  29000.0  24400.0  False    0.0  13:21:24
+17  10200.0   1000    0.0  0.0  BU  28800.0  24400.0  False    0.0  13:17:35
+18  10200.0    600    0.0  0.0  BU  27800.0  24400.0  False    0.0  13:11:37
+19  10200.0    500    0.0  0.0  BU  27200.0  24400.0  False    0.0  13:07:34
+20  10200.0    500    0.0  0.0  BU  26700.0  24400.0  False    0.0  13:06:28
+21  10200.0    100    0.0  0.0  SD  26200.0  24400.0  False    0.0  13:00:09
+22  10200.0    400    0.0  0.0  BU  26200.0  24300.0  False    0.0  11:03:15
+23  10200.0    100    0.0  0.0  BU  25800.0  24300.0  False    0.0  10:59:57
+24  10200.0    200    0.0  0.0  BU  25700.0  24300.0  False    0.0  10:59:14
+25  10200.0    100    0.0  0.0  BU  25500.0  24300.0  False    0.0  10:58:00
+26  10200.0    100    0.0  0.0  BU  25400.0  24300.0  False    0.0  10:57:05
+27  10200.0    200    0.0  0.0  BU  25300.0  24300.0  False    0.0  10:54:02
+28  10200.0    100    0.0  0.0  BU  25100.0  24300.0  False    0.0  10:51:31
+29  10200.0    900    0.0  0.0  BU  25000.0  24300.0  False    0.0  10:43:36
+30  10200.0    100    0.0  0.0  BU  24100.0  24300.0  False    0.0  10:39:00
+31  10200.0  12900    0.0  0.0  BU  24000.0  24300.0  False -100.0  10:38:33
+32  10300.0   1000  100.0  0.0  SD  11100.0  24300.0  False    0.0  10:38:23
+33  10300.0   1000  100.0  0.0  SD  11100.0  23300.0  False    0.0  10:34:30
+34  10300.0    900  100.0  0.0  BU  11100.0  22300.0  False    0.0  10:30:32
+35  10300.0   1000  100.0  0.0  BU  10200.0  22300.0  False    0.0  10:29:37
+36  10300.0    100  100.0  0.0  BU   9200.0  22300.0  False  100.0  10:28:46
+37  10200.0  20000    0.0  0.0  SD   9100.0  22300.0   True -100.0  10:08:54
+38  10300.0    300  100.0  0.0  SD   9100.0   2300.0  False -100.0  09:45:50
+39  10400.0    100  200.0  0.0  BU   9100.0   2000.0  False    0.0  09:45:35
+40  10400.0    100  200.0  0.0  BU   9000.0   2000.0  False    0.0  09:43:18
+41  10400.0    300  200.0  0.0  BU   8900.0   2000.0  False    0.0  09:42:20
+42  10400.0   1000  200.0  0.0  BU   8600.0   2000.0  False    0.0  09:40:08
+43  10400.0   2000  200.0  0.0  BU   7600.0   2000.0  False    0.0  09:36:20
+44  10400.0   2000  200.0  0.0  BU   5600.0   2000.0  False    0.0  09:36:10
+45  10400.0   3600  200.0  0.0  BU   3600.0   2000.0  False    0.0  09:35:23
+46  10400.0    500  200.0  0.0  SD      0.0   2000.0  False    0.0  09:32:41
+47  10400.0    100  200.0  0.0  SD      0.0   1500.0  False  100.0  09:27:36
+48  10300.0    100  100.0  0.0  SD      0.0   1400.0  False    0.0  09:27:09
+49  10300.0   1000  100.0  0.0  SD      0.0   1300.0  False    0.0  09:21:38
+50  10300.0    100  100.0  0.0  SD      0.0    300.0  False    0.0  09:20:15
+51  10300.0    100  100.0  0.0  SD      0.0    200.0  False    0.0  09:20:05
+52  10300.0    100  100.0  0.0  SD      0.0    100.0  False    0.0  09:19:05, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],          p      v     cp  rcp   a       ba       sa     hl    pcp         t
+0   9500.0    600    0.0  0.0  BU  47000.0  17500.0  False    0.0  14:06:42
+1   9500.0    400    0.0  0.0  BU  46400.0  17500.0  False -100.0  14:06:29
+2   9600.0   1900  100.0  0.0  BU  46000.0  17500.0  False    0.0  14:01:24
+3   9600.0  10000  100.0  0.0  BU  44100.0  17500.0  False    0.0  13:57:23
+4   9600.0    100  100.0  0.0  BU  34100.0  17500.0  False    0.0  13:54:34
+5   9600.0   1000  100.0  0.0  BU  34000.0  17500.0  False  100.0  13:32:09
+6   9500.0    300    0.0  0.0  BU  33000.0  17500.0  False    0.0  13:32:08
+7   9500.0   1000    0.0  0.0  BU  32700.0  17500.0  False    0.0  13:26:11
+8   9500.0    500    0.0  0.0  BU  31700.0  17500.0  False    0.0  13:25:46
+9   9500.0    400    0.0  0.0  BU  31200.0  17500.0  False    0.0  13:16:42
+10  9500.0   1000    0.0  0.0  BU  30800.0  17500.0  False    0.0  13:08:10
+11  9500.0   1200    0.0  0.0  BU  29800.0  17500.0  False -100.0  11:17:44
+12  9600.0    100  100.0  0.0  BU  28600.0  17500.0  False  100.0  11:13:57
+13  9500.0    200    0.0  0.0  SD  28500.0  17500.0  False    0.0  10:58:53
+14  9500.0    600    0.0  0.0  SD  28500.0  17300.0  False    0.0  10:55:20
+15  9500.0    400    0.0  0.0  BU  28500.0  16700.0  False    0.0  10:55:10
+16  9500.0   2000    0.0  0.0  BU  28100.0  16700.0  False    0.0  10:53:56
+17  9500.0   1000    0.0  0.0  BU  26100.0  16700.0  False    0.0  10:36:46
+18  9500.0   4000    0.0  0.0  BU  25100.0  16700.0  False    0.0  10:30:32
+19  9500.0   2100    0.0  0.0  SD  21100.0  16700.0  False -100.0  09:53:36
+20  9600.0    500  100.0  0.0  BU  21100.0  14600.0  False -100.0  09:32:45
+21  9700.0    200  200.0  0.0  BU  20600.0  14600.0  False    0.0  09:26:08
+22  9700.0   2000  200.0  0.0  BU  20400.0  14600.0  False    0.0  09:21:39
+23  9700.0   2500  200.0  0.0  BU  18400.0  14600.0  False -100.0  09:17:53
+24  9800.0   1000  300.0  0.0  BU  15900.0  14600.0  False  100.0  09:13:25
+25  9700.0   9000  200.0  0.0  BU  14900.0  14600.0  False    0.0  09:13:15
+26  9700.0    200  200.0  0.0  BU   5900.0  14600.0  False -200.0  09:11:50
+27  9900.0   5700  400.0  0.0  BU   5700.0  14600.0  False  100.0  09:03:56
+28  9800.0  14300  300.0  0.0  SD      0.0  14600.0  False  300.0  09:03:44
+29  9500.0    100    0.0  0.0  SD      0.0    300.0  False    0.0  09:02:45
+30  9500.0    200    0.0  0.0  SD      0.0    200.0  False    0.0  09:00:16,           p     v     cp  rcp   a        ba        sa     hl    pcp         t
+0    4000.0   700 -100.0  0.0  SD  338700.0  356300.0  False    0.0  14:09:15
+1    4000.0  3000 -100.0  0.0  SD  338700.0  355600.0  False    0.0  14:09:08
+2    4000.0  3000 -100.0  0.0  SD  338700.0  352600.0  False    0.0  14:05:09
+3    4000.0   200 -100.0  0.0  SD  338700.0  349600.0  False    0.0  14:01:34
+4    4000.0   100 -100.0  0.0  SD  338700.0  349400.0  False -100.0  14:00:08
+..      ...   ...    ...  ...  ..       ...       ...    ...    ...       ...
+188  4100.0  1500    0.0  0.0  BU    3400.0       0.0  False    0.0  09:13:05
+189  4100.0   100    0.0  0.0  BU    1900.0       0.0  False    0.0  09:12:54
+190  4100.0   100    0.0  0.0  BU    1800.0       0.0  False    0.0  09:02:50
+191  4100.0  1600    0.0  0.0  BU    1700.0       0.0  False    0.0  09:00:12
+192  4100.0   100    0.0  0.0  BU     100.0       0.0  False    0.0  09:00:04
+
+[193 rows x 10 columns],             p      v     cp  rcp  ...        sa     hl    pcp         t
+0     36000.0   1200 -100.0  0.0  ...  948200.0  False    0.0  14:10:08
+1     36000.0    700 -100.0  0.0  ...  947000.0  False    0.0  14:10:08
+2     36000.0    500 -100.0  0.0  ...  946300.0  False    0.0  14:10:08
+3     36000.0   2000 -100.0  0.0  ...  945800.0  False    0.0  14:10:08
+4     36000.0   1000 -100.0  0.0  ...  943800.0  False    0.0  14:10:08
+...       ...    ...    ...  ...  ...       ...    ...    ...       ...
+1848  35850.0    200 -250.0  0.0  ...     400.0  False    0.0  09:15:43
+1849  35850.0    100 -250.0  0.0  ...     200.0  False    0.0  09:15:37
+1850  35850.0    100 -250.0  0.0  ...     100.0  False -150.0  09:15:25
+1851  36000.0  10000 -100.0  0.0  ...       0.0   True  200.0  09:15:11
+1852  35800.0  61600 -300.0  0.0  ...       0.0  False    0.0  09:15:00
+
+[1853 rows x 10 columns],           p       v     cp  rcp   a        ba        sa     hl    pcp         t
+0    9580.0    1800 -240.0  0.0  BU  349000.0  424400.0  False    0.0  14:09:34
+1    9580.0    3000 -240.0  0.0  SD  347200.0  424400.0  False    0.0  14:09:29
+2    9580.0     700 -240.0  0.0  BU  347200.0  421400.0  False   30.0  14:08:27
+3    9550.0     100 -270.0  0.0  SD  346500.0  421400.0  False   10.0  14:07:56
+4    9540.0     900 -280.0  0.0  SD  346500.0  421300.0  False    0.0  14:07:51
+..      ...     ...    ...  ...  ..       ...       ...    ...    ...       ...
+722  9800.0    1000  -20.0  0.0  BU    2300.0       0.0  False  -20.0  09:15:29
+723  9820.0     100    0.0  0.0  BU    1300.0       0.0  False    0.0  09:15:23
+724  9820.0    1000    0.0  0.0  BU    1200.0       0.0  False    0.0  09:15:07
+725  9820.0     200    0.0  0.0  BU     200.0       0.0  False  320.0  09:15:03
+726  9500.0  181000 -320.0  0.0           0.0       0.0  False    0.0  09:15:00
+
+[727 rows x 10 columns], Empty DataFrame
+Columns: []
+Index: [],           p     v   cp  rcp   a        ba        sa     hl  pcp         t
+0    6000.0  2000  0.0  0.0  BU  208300.0  239800.0  False  0.0  14:09:46
+1    6000.0  2500  0.0  0.0  BU  206300.0  239800.0  False  0.0  14:04:21
+2    6000.0   400  0.0  0.0  BU  203800.0  239800.0  False  0.0  14:02:04
+3    6000.0   800  0.0  0.0  BU  203400.0  239800.0  False  0.0  14:00:03
+4    6000.0   100  0.0  0.0  SD  202600.0  239800.0  False  0.0  13:59:29
+..      ...   ...  ...  ...  ..       ...       ...    ...  ...       ...
+138  6000.0   200  0.0  0.0  BU    1300.0    1000.0  False  0.0  09:02:31
+139  6000.0   500  0.0  0.0  BU    1100.0    1000.0  False  0.0  09:01:36
+140  6000.0   100  0.0  0.0  BU     600.0    1000.0  False  0.0  09:01:08
+141  6000.0   500  0.0  0.0  BU     500.0    1000.0  False  0.0  09:01:01
+142  6000.0  1000  0.0  0.0  SD       0.0    1000.0  False  0.0  09:00:07
+
+[143 rows x 10 columns],           p      v     cp  rcp   a        ba        sa     hl  pcp         t
+0    7000.0    200 -200.0  0.0  BU  261000.0  423900.0  False  0.0  14:09:53
+1    7000.0  14700 -200.0  0.0  SD  260800.0  423900.0  False  0.0  14:09:45
+2    7000.0   1000 -200.0  0.0  SD  260800.0  409200.0  False  0.0  14:09:40
+3    7000.0   1500 -200.0  0.0  SD  260800.0  408200.0  False  0.0  14:09:31
+4    7000.0   1500 -200.0  0.0  SD  260800.0  406700.0  False  0.0  14:09:24
+..      ...    ...    ...  ...  ..       ...       ...    ...  ...       ...
+220  7300.0   5800  100.0  0.0  SD   12900.0    6800.0  False  0.0  09:01:57
+221  7300.0   1000  100.0  0.0  SD   12900.0    1000.0  False  0.0  09:01:46
+222  7300.0   9700  100.0  0.0  BU   12900.0       0.0  False  0.0  09:01:16
+223  7300.0   2000  100.0  0.0  BU    3200.0       0.0  False  0.0  09:00:14
+224  7300.0   1200  100.0  0.0  BU    1200.0       0.0  False  0.0  09:00:05
+
+[225 rows x 10 columns], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],           p     v     cp  rcp   a      ba      sa     hl    pcp         t
+0   26500.0  1400  100.0  0.0  BU  5700.0  1100.0  False -400.0  13:06:45
+1   26900.0  1000  500.0  0.0  BU  4300.0  1100.0  False    0.0  13:05:10
+2   26900.0   800  500.0  0.0  BU  3300.0  1100.0  False  300.0  10:49:38
+3   26600.0  1000  200.0  0.0  SD  2500.0  1100.0  False -300.0  10:44:10
+4   26900.0   300  500.0  0.0  BU  2500.0   100.0  False    0.0  10:35:15
+5   26900.0  1000  500.0  0.0  BU  2200.0   100.0  False    0.0  10:25:23
+6   26900.0   800  500.0  0.0  BU  1200.0   100.0  False    0.0  10:16:01
+7   26900.0   100  500.0  0.0  BU   400.0   100.0  False    0.0  10:11:24
+8   26900.0   100  500.0  0.0  BU   300.0   100.0  False  300.0  09:41:27
+9   26600.0   100  200.0  0.0  SD   200.0   100.0  False -400.0  09:41:11
+10  27000.0   100  600.0  0.0  BU   200.0     0.0  False -100.0  09:18:53
+11  27100.0   100  700.0  0.0  BU   100.0     0.0  False    0.0  09:03:23, Empty DataFrame
+Columns: []
+Index: [],           p     v     cp  rcp   a       ba       sa     hl   pcp         t
+0   18750.0  2000   50.0  0.0  BU  41400.0  26500.0  False -50.0  14:07:49
+1   18800.0   100  100.0  0.0  BU  39400.0  26500.0  False   0.0  14:04:47
+2   18800.0  1000  100.0  0.0  SD  39300.0  26500.0  False   0.0  14:02:10
+3   18800.0   200  100.0  0.0  SD  39300.0  25500.0  False   0.0  14:02:10
+4   18800.0   800  100.0  0.0  SD  39300.0  25300.0  False   0.0  14:01:46
+..      ...   ...    ...  ...  ..      ...      ...    ...   ...       ...
+78  18900.0   100  200.0  0.0  BU    500.0      0.0  False   0.0  09:30:32
+79  18900.0   100  200.0  0.0  BU    400.0      0.0  False   0.0  09:27:36
+80  18900.0   100  200.0  0.0  BU    300.0      0.0  False   0.0  09:25:59
+81  18900.0   100  200.0  0.0  BU    200.0      0.0  False -50.0  09:25:59
+82  18950.0   100  250.0  0.0  BU    100.0      0.0  False   0.0  09:15:52
+
+[83 rows x 10 columns],           p     v     cp  rcp   a      ba      sa     hl    pcp         t
+0   25050.0   100   50.0  0.0  BU  8700.0  4400.0  False    0.0  14:02:33
+1   25050.0   400   50.0  0.0  BU  8600.0  4400.0  False    0.0  14:01:28
+2   25050.0   100   50.0  0.0  BU  8200.0  4400.0  False    0.0  14:00:20
+3   25050.0   300   50.0  0.0  BU  8100.0  4400.0  False    0.0  14:00:20
+4   25050.0  1400   50.0  0.0  BU  7800.0  4400.0  False   50.0  14:00:20
+5   25000.0   100    0.0  0.0  SD  6400.0  4400.0  False  -50.0  13:49:51
+6   25050.0   200   50.0  0.0  BU  6400.0  4300.0  False    0.0  13:40:17
+7   25050.0   500   50.0  0.0  BU  6200.0  4300.0  False    0.0  13:40:17
+8   25050.0  1000   50.0  0.0  BU  5700.0  4300.0  False    0.0  13:40:17
+9   25050.0   300   50.0  0.0  BU  4700.0  4300.0  False  100.0  13:40:17
+10  24950.0   500  -50.0  0.0  SD  4400.0  4300.0  False -100.0  13:40:16
+11  25050.0   100   50.0  0.0  BU  4400.0  3800.0  False    0.0  13:34:10
+12  25050.0   100   50.0  0.0  BU  4300.0  3800.0  False  150.0  13:13:29
+13  24900.0   100 -100.0  0.0  SD  4200.0  3800.0  False    0.0  13:10:37
+14  24900.0  2000 -100.0  0.0  SD  4200.0  3700.0  False -200.0  13:09:01
+15  25100.0   100  100.0  0.0  BU  4200.0  1700.0  False   50.0  13:02:26
+16  25050.0  1000   50.0  0.0  BU  4100.0  1700.0  False    0.0  13:02:26
+17  25050.0   200   50.0  0.0  BU  3100.0  1700.0  False  150.0  13:00:14
+18  24900.0   500 -100.0  0.0  SD  2900.0  1700.0  False -250.0  13:00:01
+19  25150.0   100  150.0  0.0  BU  2900.0  1200.0  False  250.0  11:03:08
+20  24900.0   500 -100.0  0.0  SD  2800.0  1200.0  False -200.0  10:55:05
+21  25100.0   100  100.0  0.0  BU  2800.0   700.0  False  -50.0  10:53:46
+22  25150.0   500  150.0  0.0  BU  2700.0   700.0  False  -50.0  10:53:46
+23  25200.0   100  200.0  0.0  BU  2200.0   700.0  False  350.0  10:36:15
+24  24850.0   700 -150.0  0.0  SD  2100.0   700.0  False -350.0  10:35:41
+25  25200.0   100  200.0  0.0  BU  2100.0     0.0  False -200.0  10:14:18
+26  25400.0   100  400.0  0.0  BU  2000.0     0.0  False  400.0  09:20:00
+27  25000.0   100    0.0  0.0  BU  1900.0     0.0  False    0.0  09:20:00
+28  25000.0  1000    0.0  0.0  BU  1800.0     0.0  False    0.0  09:20:00
+29  25000.0   100    0.0  0.0  BU   800.0     0.0  False    0.0  09:20:00
+30  25000.0   700    0.0  0.0  BU   700.0     0.0  False    0.0  09:18:20
+31  25000.0  1200    0.0  0.0         0.0     0.0  False    0.0  09:15:00,            p     v     cp  rcp   a        ba        sa     hl    pcp         t
+0    44550.0   100  150.0  0.0  BU  239900.0  319200.0  False  100.0  14:09:28
+1    44450.0   500   50.0  0.0  SD  239800.0  319200.0  False    0.0  14:09:12
+2    44450.0   300   50.0  0.0  SD  239800.0  318700.0  False    0.0  14:09:12
+3    44450.0   300   50.0  0.0  SD  239800.0  318400.0  False    0.0  14:08:57
+4    44450.0   900   50.0  0.0  SD  239800.0  318100.0  False    0.0  14:08:52
+..       ...   ...    ...  ...  ..       ...       ...    ...    ...       ...
+932  44350.0   300  -50.0  0.0  SD       0.0    1300.0  False    0.0  09:15:47
+933  44350.0   500  -50.0  0.0  SD       0.0    1000.0  False    0.0  09:15:47
+934  44350.0   100  -50.0  0.0  SD       0.0     500.0  False    0.0  09:15:47
+935  44350.0   400  -50.0  0.0  SD       0.0     400.0  False    0.0  09:15:46
+936  44350.0  6900  -50.0  0.0           0.0       0.0  False    0.0  09:15:00
+
+[937 rows x 10 columns], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],           p     v     cp  rcp   a       ba       sa     hl    pcp         t
+0   11700.0  2000 -200.0  0.0  SD  35400.0  29100.0  False    0.0  14:09:59
+1   11700.0  4000 -200.0  0.0  BU  35400.0  27100.0  False    0.0  13:48:38
+2   11700.0   300 -200.0  0.0  BU  31400.0  27100.0  False    0.0  13:48:04
+3   11700.0   400 -200.0  0.0  BU  31100.0  27100.0  False    0.0  13:42:35
+4   11700.0   800 -200.0  0.0  BU  30700.0  27100.0  False    0.0  13:41:02
+5   11700.0   900 -200.0  0.0  BU  29900.0  27100.0  False    0.0  13:31:43
+6   11700.0  2100 -200.0  0.0  BU  29000.0  27100.0  False    0.0  13:30:40
+7   11700.0  2000 -200.0  0.0  BU  26900.0  27100.0  False    0.0  13:29:16
+8   11700.0   700 -200.0  0.0  BU  24900.0  27100.0  False    0.0  13:16:23
+9   11700.0  9300 -200.0  0.0  BU  24200.0  27100.0  False -100.0  13:15:18
+10  11800.0   200 -100.0  0.0  BU  14900.0  27100.0  False    0.0  13:14:53
+11  11800.0  2000 -100.0  0.0  SD  14700.0  27100.0  False    0.0  13:14:51
+12  11800.0   800 -100.0  0.0  SD  14700.0  25100.0  False    0.0  13:13:57
+13  11800.0   200 -100.0  0.0  SD  14700.0  24300.0  False -100.0  13:13:50
+14  11900.0  1000    0.0  0.0  BU  14700.0  24100.0  False    0.0  13:06:56
+15  11900.0  2800    0.0  0.0  BU  13700.0  24100.0  False    0.0  13:05:05
+16  11900.0   700    0.0  0.0  BU  10900.0  24100.0  False    0.0  13:00:05
+17  11900.0   300    0.0  0.0  SD  10200.0  24100.0  False    0.0  13:00:03
+18  11900.0   200    0.0  0.0  BU  10200.0  23800.0  False    0.0  11:18:46
+19  11900.0  1000    0.0  0.0  BU  10000.0  23800.0  False    0.0  11:18:24
+20  11900.0   800    0.0  0.0  BU   9000.0  23800.0  False    0.0  11:14:04
+21  11900.0   100    0.0  0.0  BU   8200.0  23800.0  False    0.0  11:08:50
+22  11900.0   300    0.0  0.0  BU   8100.0  23800.0  False    0.0  11:06:33
+23  11900.0  1000    0.0  0.0  BU   7800.0  23800.0  False    0.0  10:53:02
+24  11900.0  2000    0.0  0.0  BU   6800.0  23800.0  False    0.0  10:40:35
+25  11900.0  1600    0.0  0.0  SD   4800.0  23800.0  False -100.0  10:40:07
+26  12000.0  1700  100.0  0.0  BU   4800.0  22200.0  False    0.0  10:29:02
+27  12000.0  1000  100.0  0.0  SD   3100.0  22200.0  False -100.0  10:20:39
+28  12100.0   200  200.0  0.0  BU   3100.0  21200.0  False  100.0  10:14:58
+29  12000.0   100  100.0  0.0  SD   2900.0  21200.0  False    0.0  10:11:39
+30  12000.0  6300  100.0  0.0  SD   2900.0  21100.0  False    0.0  10:09:47
+31  12000.0   100  100.0  0.0  SD   2900.0  14800.0  False    0.0  10:05:06
+32  12000.0   200  100.0  0.0  SD   2900.0  14700.0  False    0.0  10:01:30
+33  12000.0  3000  100.0  0.0  SD   2900.0  14500.0  False    0.0  10:01:20
+34  12000.0   100  100.0  0.0  SD   2900.0  11500.0  False    0.0  10:00:09
+35  12000.0   300  100.0  0.0  SD   2900.0  11400.0  False -100.0  09:53:24
+36  12100.0   100  200.0  0.0  BU   2900.0  11100.0  False  100.0  09:53:16
+37  12000.0   200  100.0  0.0  SD   2800.0  11100.0  False    0.0  09:51:11
+38  12000.0  4700  100.0  0.0  SD   2800.0  10900.0  False    0.0  09:49:45
+39  12000.0  1500  100.0  0.0  BU   2800.0   6200.0  False    0.0  09:43:49
+40  12000.0   500  100.0  0.0  BU   1300.0   6200.0  False -100.0  09:38:59
+41  12100.0   200  200.0  0.0  BU    800.0   6200.0  False  100.0  09:30:48
+42  12000.0   100  100.0  0.0  BU    600.0   6200.0  False    0.0  09:28:48
+43  12000.0  2000  100.0  0.0  SD    500.0   6200.0  False -100.0  09:25:09
+44  12100.0   100  200.0  0.0  BU    500.0   4200.0  False  100.0  09:17:08
+45  12000.0  4000  100.0  0.0  SD    400.0   4200.0  False    0.0  09:16:49
+46  12000.0   200  100.0  0.0  SD    400.0    200.0  False    0.0  09:05:44
+47  12000.0   100  100.0  0.0  BU    400.0      0.0  False  100.0  09:02:33
+48  11900.0   300    0.0  0.0  BU    300.0      0.0  False    0.0  09:00:16, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],           p      v     cp  rcp   a       ba       sa     hl    pcp         t
+0   10300.0   1000  100.0  0.0  BU  27100.0  65700.0  False  100.0  14:10:11
+1   10200.0   4800    0.0  0.0  BU  26100.0  65700.0  False -100.0  14:05:00
+2   10300.0  10000  100.0  0.0  BU  21300.0  65700.0  False  100.0  13:57:00
+3   10200.0    200    0.0  0.0  BU  11300.0  65700.0  False    0.0  13:52:14
+4   10200.0    300    0.0  0.0  BU  11100.0  65700.0  False    0.0  13:50:39
+5   10200.0   2000    0.0  0.0  SD  10800.0  65700.0  False    0.0  13:50:21
+6   10200.0   1400    0.0  0.0  SD  10800.0  63700.0  False    0.0  13:48:00
+7   10200.0   1000    0.0  0.0  SD  10800.0  62300.0  False    0.0  13:46:30
+8   10200.0   3000    0.0  0.0  SD  10800.0  61300.0  False -100.0  13:43:00
+9   10300.0   2000  100.0  0.0  BU  10800.0  58300.0  False    0.0  13:40:57
+10  10300.0   2000  100.0  0.0  BU   8800.0  58300.0  False  100.0  13:35:51
+11  10200.0   1000    0.0  0.0  SD   6800.0  58300.0  False    0.0  13:27:17
+12  10200.0   3000    0.0  0.0  SD   6800.0  57300.0  False    0.0  13:20:44
+13  10200.0    500    0.0  0.0  SD   6800.0  54300.0  False -100.0  13:11:09
+14  10300.0   4000  100.0  0.0  BU   6800.0  53800.0  False  100.0  13:01:47
+15  10200.0    200    0.0  0.0  BU   2800.0  53800.0  False    0.0  11:29:58
+16  10200.0    100    0.0  0.0  BU   2600.0  53800.0  False    0.0  11:29:04
+17  10200.0  15000    0.0  0.0  SD   2500.0  53800.0  False    0.0  11:12:25
+18  10200.0   2000    0.0  0.0  SD   2500.0  38800.0  False    0.0  11:09:02
+19  10200.0    300    0.0  0.0  SD   2500.0  36800.0  False    0.0  11:07:27
+20  10200.0    100    0.0  0.0  SD   2500.0  36500.0  False    0.0  10:34:29
+21  10200.0   2000    0.0  0.0  SD   2500.0  36400.0  False    0.0  10:22:04
+22  10200.0   3500    0.0  0.0  SD   2500.0  34400.0  False    0.0  10:16:25
+23  10200.0   2000    0.0  0.0  SD   2500.0  30900.0  False    0.0  10:13:36
+24  10200.0   5300    0.0  0.0  SD   2500.0  28900.0  False    0.0  10:07:33
+25  10200.0  10000    0.0  0.0  SD   2500.0  23600.0  False    0.0  10:06:42
+26  10200.0   3400    0.0  0.0  SD   2500.0  13600.0  False -100.0  09:53:15
+27  10300.0    500  100.0  0.0  BU   2500.0  10200.0  False    0.0  09:52:07
+28  10300.0    500  100.0  0.0  BU   2000.0  10200.0  False  100.0  09:49:37
+29  10200.0   1000    0.0  0.0  SD   1500.0  10200.0  False    0.0  09:48:58
+30  10200.0   1500    0.0  0.0  SD   1500.0   9200.0  False    0.0  09:48:16
+31  10200.0    100    0.0  0.0  SD   1500.0   7700.0  False    0.0  09:46:25
+32  10200.0    100    0.0  0.0  SD   1500.0   7600.0  False    0.0  09:18:44
+33  10200.0   5000    0.0  0.0  SD   1500.0   7500.0  False -200.0  09:17:06
+34  10400.0   1000  200.0  0.0  BU   1500.0   2500.0  False  200.0  09:16:33
+35  10200.0   2300    0.0  0.0  SD    500.0   2500.0  False -100.0  09:00:17
+36  10300.0    200  100.0  0.0  SD    500.0    200.0  False -100.0  09:00:16
+37  10400.0    300  200.0  0.0  BU    500.0      0.0  False    0.0  09:00:04
+38  10400.0    200  200.0  0.0  BU    200.0      0.0  False    0.0  09:00:03, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],           p     v     cp  rcp   a       ba       sa     hl    pcp         t
+0   46000.0  1200    0.0  0.0  BU  16000.0  28800.0  False    0.0  14:07:08
+1   46000.0  2000    0.0  0.0  SD  14800.0  28800.0  False    0.0  14:01:21
+2   46000.0  1800    0.0  0.0  BU  14800.0  26800.0  False    0.0  13:52:57
+3   46000.0   500    0.0  0.0  BU  13000.0  26800.0  False    0.0  13:52:27
+4   46000.0   100    0.0  0.0  BU  12500.0  26800.0  False    0.0  13:49:12
+5   46000.0   100    0.0  0.0  BU  12400.0  26800.0  False    0.0  13:47:45
+6   46000.0  5000    0.0  0.0  SD  12300.0  26800.0   True    0.0  13:43:08
+7   46000.0  2000    0.0  0.0  SD  12300.0  21800.0  False    0.0  13:43:07
+8   46000.0  2300    0.0  0.0  SD  12300.0  19800.0  False -100.0  13:43:07
+9   46100.0   100  100.0  0.0  BU  12300.0  17500.0  False    0.0  13:35:27
+10  46100.0  1000  100.0  0.0  BU  12200.0  17500.0  False    0.0  13:32:52
+11  46100.0   100  100.0  0.0  BU  11200.0  17500.0  False  100.0  13:29:44
+12  46000.0  3500    0.0  0.0  BU  11100.0  17500.0  False    0.0  13:24:23
+13  46000.0   100    0.0  0.0  BU   7600.0  17500.0  False  100.0  13:22:06
+14  45900.0   300 -100.0  0.0  SD   7500.0  17500.0  False    0.0  13:17:53
+15  45900.0   100 -100.0  0.0  SD   7500.0  17200.0  False    0.0  13:17:53
+16  45900.0   100 -100.0  0.0  SD   7500.0  17100.0  False    0.0  13:17:53
+17  45900.0  4500 -100.0  0.0  SD   7500.0  17000.0   True -100.0  13:17:53
+18  46000.0   100    0.0  0.0  BU   7500.0  12500.0  False    0.0  13:14:39
+19  46000.0   100    0.0  0.0  BU   7400.0  12500.0  False    0.0  13:13:22
+20  46000.0   100    0.0  0.0  BU   7300.0  12500.0  False    0.0  13:13:22
+21  46000.0   500    0.0  0.0  BU   7200.0  12500.0  False    0.0  13:13:22
+22  46000.0   100    0.0  0.0  SD   6700.0  12500.0  False    0.0  13:13:11
+23  46000.0  3000    0.0  0.0  SD   6700.0  12400.0  False    0.0  13:11:40
+24  46000.0  1500    0.0  0.0  SD   6700.0   9400.0  False    0.0  13:10:54
+25  46000.0   400    0.0  0.0  SD   6700.0   7900.0  False    0.0  13:07:16
+26  46000.0   100    0.0  0.0  SD   6700.0   7500.0  False -100.0  13:07:16
+27  46100.0   100  100.0  0.0  BU   6700.0   7400.0  False    0.0  13:03:52
+28  46100.0   600  100.0  0.0  BU   6600.0   7400.0  False    0.0  11:19:19
+29  46100.0   400  100.0  0.0  BU   6000.0   7400.0  False    0.0  11:19:19
+30  46100.0   100  100.0  0.0  BU   5600.0   7400.0  False    0.0  11:17:17
+31  46100.0   300  100.0  0.0  BU   5500.0   7400.0  False    0.0  11:10:39
+32  46100.0  3000  100.0  0.0  BU   5200.0   7400.0  False    0.0  11:09:05
+33  46100.0   200  100.0  0.0  BU   2200.0   7400.0  False  100.0  10:58:11
+34  46000.0   100    0.0  0.0  SD   2000.0   7400.0  False    0.0  10:53:42
+35  46000.0   100    0.0  0.0  SD   2000.0   7300.0  False    0.0  10:53:42
+36  46000.0   100    0.0  0.0  SD   2000.0   7200.0  False    0.0  10:53:42
+37  46000.0   300    0.0  0.0  SD   2000.0   7100.0  False    0.0  10:53:42
+38  46000.0   500    0.0  0.0  SD   2000.0   6800.0  False    0.0  10:53:42
+39  46000.0  1900    0.0  0.0  SD   2000.0   6300.0  False    0.0  10:53:42
+40  46000.0   100    0.0  0.0  SD   2000.0   4400.0  False -200.0  10:40:16
+41  46200.0   500  200.0  0.0  BU   2000.0   4300.0  False    0.0  10:23:46
+42  46200.0   700  200.0  0.0  BU   1500.0   4300.0  False    0.0  10:23:46
+43  46200.0   500  200.0  0.0  SD    800.0   4300.0  False -300.0  10:20:26
+44  46500.0   100  500.0  0.0  BU    800.0   3800.0  False  300.0  10:20:19
+45  46200.0   300  200.0  0.0  SD    700.0   3800.0  False    0.0  10:20:11
+46  46200.0   100  200.0  0.0  SD    700.0   3500.0  False    0.0  10:13:49
+47  46200.0   400  200.0  0.0  SD    700.0   3400.0  False  200.0  10:05:54
+48  46000.0  1000    0.0  0.0  SD    700.0   3000.0  False    0.0  09:51:38
+49  46000.0  1000    0.0  0.0  SD    700.0   2000.0  False    0.0  09:51:19
+50  46000.0  1000    0.0  0.0  SD    700.0   1000.0  False -200.0  09:50:59
+51  46200.0   100  200.0  0.0  BU    700.0      0.0  False    0.0  09:44:04
+52  46200.0   100  200.0  0.0  BU    600.0      0.0  False    0.0  09:44:04
+53  46200.0   200  200.0  0.0  BU    500.0      0.0  False    0.0  09:43:50
+54  46200.0   200  200.0  0.0  BU    300.0      0.0  False  200.0  09:43:30
+55  46000.0   100    0.0  0.0  BU    100.0      0.0  False    0.0  09:15:11
+56  46000.0   400    0.0  0.0          0.0      0.0  False    0.0  09:15:11, Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [], Empty DataFrame
+Columns: []
+Index: [],           p      v    cp  rcp   a       ba       sa     hl   pcp         t
+0    6400.0   1000 -70.0  0.0  SD  25700.0  41600.0  False   0.0  14:06:12
+1    6400.0   1000 -70.0  0.0  SD  25700.0  40600.0  False   0.0  14:04:46
+2    6400.0   1000 -70.0  0.0  SD  25700.0  39600.0  False -50.0  14:04:46
+3    6450.0   1000 -20.0  0.0  BU  25700.0  38600.0  False   0.0  14:01:28
+4    6450.0    900 -20.0  0.0  SD  24700.0  38600.0  False -10.0  14:00:59
+..      ...    ...   ...  ...  ..      ...      ...    ...   ...       ...
+112  6400.0    500 -70.0  0.0  SD    300.0   1500.0  False   0.0  09:18:04
+113  6400.0   1000 -70.0  0.0  SD    300.0   1000.0  False -70.0  09:18:04
+114  6470.0    200   0.0  0.0  BU    300.0      0.0  False -20.0  09:17:22
+115  6490.0    100  20.0  0.0  BU    100.0      0.0  False -10.0  09:16:54
+116  6500.0  11000  30.0  0.0          0.0      0.0  False   0.0  09:15:00
+
+[117 rows x 10 columns]]
+[2023-09-28T14:10:40.828+0700] {logging_mixin.py:151} INFO - hello
+[2023-09-28T14:10:40.828+0700] {logging_mixin.py:151} INFO - 50
+[2023-09-28T14:10:40.829+0700] {logging_mixin.py:151} WARNING -   0%|          | 0/50 [00:00<?, ?it/s]
+[2023-09-28T14:10:40.829+0700] {logging_mixin.py:151} WARNING - 
+[2023-09-28T14:10:40.830+0700] {logging_mixin.py:151} INFO - ASG is empty
+[2023-09-28T14:10:40.841+0700] {logging_mixin.py:151} INFO -           p     v     cp  rcp   a      ba      sa     hl    pcp         t
+0   12050.0   100 -250.0  0.0  BU  3700.0  9100.0  False    0.0  14:03:24
+1   12050.0   900 -250.0  0.0  BU  3600.0  9100.0  False   50.0  14:03:03
+2   12000.0   500 -300.0  0.0  SD  2700.0  9100.0  False    0.0  13:57:02
+3   12000.0   100 -300.0  0.0  SD  2700.0  8600.0  False    0.0  13:57:02
+4   12000.0   200 -300.0  0.0  SD  2700.0  8500.0  False    0.0  13:51:55
+5   12000.0   100 -300.0  0.0  SD  2700.0  8300.0  False    0.0  13:51:55
+6   12000.0   500 -300.0  0.0  SD  2700.0  8200.0  False  -50.0  13:51:16
+7   12050.0   400 -250.0  0.0  BU  2700.0  7700.0  False    0.0  13:34:04
+8   12050.0   100 -250.0  0.0  SD  2300.0  7700.0  False -150.0  13:10:39
+9   12200.0   100 -100.0  0.0  BU  2300.0  7600.0  False  100.0  11:29:18
+10  12100.0   300 -200.0  0.0  BU  2200.0  7600.0  False    0.0  11:29:18
+11  12100.0   100 -200.0  0.0  BU  1900.0  7600.0  False    0.0  11:19:49
+12  12100.0   300 -200.0  0.0  BU  1800.0  7600.0  False    0.0  11:19:37
+13  12100.0   200 -200.0  0.0  BU  1500.0  7600.0  False  100.0  10:57:27
+14  12000.0  1800 -300.0  0.0  SD  1300.0  7600.0  False    0.0  10:49:27
+15  12000.0   200 -300.0  0.0  SD  1300.0  5800.0  False    0.0  10:38:56
+16  12000.0  1000 -300.0  0.0  SD  1300.0  5600.0  False    0.0  10:38:56
+17  12000.0   300 -300.0  0.0  SD  1300.0  4600.0  False    0.0  10:38:56
+18  12000.0   100 -300.0  0.0  SD  1300.0  4300.0  False    0.0  10:38:56
+19  12000.0   100 -300.0  0.0  SD  1300.0  4200.0  False    0.0  10:38:56
+20  12000.0   200 -300.0  0.0  SD  1300.0  4100.0  False -100.0  10:38:56
+21  12100.0   100 -200.0  0.0  BU  1300.0  3900.0  False    0.0  10:36:31
+22  12100.0   200 -200.0  0.0  BU  1200.0  3900.0  False  100.0  10:30:00
+23  12000.0   300 -300.0  0.0  SD  1000.0  3900.0  False  -50.0  10:16:26
+24  12050.0   400 -250.0  0.0  SD  1000.0  3600.0  False    0.0  10:14:24
+25  12050.0   100 -250.0  0.0  SD  1000.0  3200.0  False  -50.0  10:14:24
+26  12100.0   200 -200.0  0.0  SD  1000.0  3100.0  False    0.0  10:00:49
+27  12100.0   100 -200.0  0.0  SD  1000.0  2900.0  False    0.0  10:00:49
+28  12100.0   100 -200.0  0.0  SD  1000.0  2800.0  False  -50.0  10:00:49
+29  12150.0  1000 -150.0  0.0  SD  1000.0  2700.0  False    0.0  10:00:16
+30  12150.0   100 -150.0  0.0  SD  1000.0  1700.0  False  -50.0  10:00:16
+31  12200.0  1500 -100.0  0.0  SD  1000.0  1600.0  False    0.0  09:50:50
+32  12200.0   100 -100.0  0.0  SD  1000.0   100.0  False    0.0  09:50:12
+33  12200.0   400 -100.0  0.0  BU  1000.0     0.0  False    0.0  09:40:26
+34  12200.0   500 -100.0  0.0  BU   600.0     0.0  False    0.0  09:33:24
+35  12200.0   100 -100.0  0.0  BU   100.0     0.0  False -100.0  09:24:36
+36  12300.0   300    0.0  0.0         0.0     0.0  False    0.0  09:15:00
+[2023-09-28T14:10:40.847+0700] {logging_mixin.py:151} INFO - DRIVER={ODBC Driver 18 for SQL Server};SERVER=host.docker.internal;DATABASE=etl_ingest_time_2023_09_28_14_09_14;UID=sa;PWD=Docker@123;TrustServerCertificate=yes;
+[2023-09-28T14:10:40.975+0700] {logging_mixin.py:151} WARNING -   2%|2         | 1/50 [00:00<00:07,  6.86it/s]
+[2023-09-28T14:10:40.976+0700] {logging_mixin.py:151} WARNING -  31%|###       | 4/13 [01:25<03:12, 21.42s/it]
+[2023-09-28T14:10:40.977+0700] {logging_mixin.py:151} INFO - Cannot save file into a non-existent directory: '/opt/***/data/etl_ingest_time_2023_09_28_14_09_14'
+[2023-09-28T14:10:40.979+0700] {python.py:194} INFO - Done. Returned value was: None
+[2023-09-28T14:10:40.989+0700] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20230922T001800, start_date=20230928T070914, end_date=20230928T071040
+[2023-09-28T14:10:41.055+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-28T14:10:41.069+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

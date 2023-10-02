@@ -1,0 +1,32 @@
+[2023-09-25T16:38:15.141+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task manual__2023-09-25T06:50:22.632873+00:00 [queued]>
+[2023-09-25T16:38:15.148+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.run_my_async_task manual__2023-09-25T06:50:22.632873+00:00 [queued]>
+[2023-09-25T16:38:15.149+0700] {taskinstance.py:1359} INFO - Starting attempt 17 of 22
+[2023-09-25T16:38:15.161+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): run_my_async_task> on 2023-09-25 06:50:22.632873+00:00
+[2023-09-25T16:38:15.166+0700] {standard_task_runner.py:57} INFO - Started process 83 to run task
+[2023-09-25T16:38:15.169+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'run_my_async_task', 'manual__2023-09-25T06:50:22.632873+00:00', '--job-id', '152', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmpwfbbszsm']
+[2023-09-25T16:38:15.171+0700] {standard_task_runner.py:85} INFO - Job 152: Subtask run_my_async_task
+[2023-09-25T16:38:15.216+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.run_my_async_task manual__2023-09-25T06:50:22.632873+00:00 [running]> on host 33b2b98956f5
+[2023-09-25T16:38:15.267+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='run_my_async_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-25T06:50:22.632873+00:00' AIRFLOW_CTX_TRY_NUMBER='17' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-09-25T06:50:22.632873+00:00'
+[2023-09-25T16:38:15.279+0700] {logging_mixin.py:151} INFO - ['ASG', 'BAX', 'BCF', 'BSA', 'BSH', 'DHB', 'DP2', 'DSG', 'DTK', 'EIC']
+[2023-09-25T16:38:15.281+0700] {logging_mixin.py:151} INFO - etl_ingest_time_2023_09_25_16_38_15
+[2023-09-25T16:38:45.306+0700] {logging_mixin.py:151} INFO - Lỗi to đùng đùng
+[2023-09-25T16:38:45.307+0700] {logging_mixin.py:151} INFO - ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+[2023-09-25T16:38:45.309+0700] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/crawlInvest.py", line 149, in run_my_async_task
+    asyncio.run(crawl(Code_stock))
+  File "/usr/local/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/airflow/dags/crawlInvest.py", line 95, in crawl
+    cursor = conn.cursor()
+AttributeError: 'NoneType' object has no attribute 'cursor'
+[2023-09-25T16:38:45.326+0700] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=crawl_dag_v01, task_id=run_my_async_task, execution_date=20230925T065022, start_date=20230925T093815, end_date=20230925T093845
+[2023-09-25T16:38:45.342+0700] {standard_task_runner.py:104} ERROR - Failed to execute job 152 for task run_my_async_task ('NoneType' object has no attribute 'cursor'; 83)
+[2023-09-25T16:38:45.375+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-25T16:38:45.390+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

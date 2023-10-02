@@ -1,0 +1,22 @@
+[2023-09-22T17:17:12.316+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag_v01.crawl manual__2023-09-22T09:05:17.387394+00:00 [queued]>
+[2023-09-22T17:17:12.321+0700] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag_v01.crawl manual__2023-09-22T09:05:17.387394+00:00 [queued]>
+[2023-09-22T17:17:12.322+0700] {taskinstance.py:1359} INFO - Starting attempt 9 of 14
+[2023-09-22T17:17:12.329+0700] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): crawl> on 2023-09-22 09:05:17.387394+00:00
+[2023-09-22T17:17:12.333+0700] {standard_task_runner.py:57} INFO - Started process 1704 to run task
+[2023-09-22T17:17:12.337+0700] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag_v01', 'crawl', 'manual__2023-09-22T09:05:17.387394+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/crawlInvest.py', '--cfg-path', '/tmp/tmp4xueysvy']
+[2023-09-22T17:17:12.339+0700] {standard_task_runner.py:85} INFO - Job 62: Subtask crawl
+[2023-09-22T17:17:12.380+0700] {task_command.py:415} INFO - Running <TaskInstance: crawl_dag_v01.crawl manual__2023-09-22T09:05:17.387394+00:00 [running]> on host 92f43f7b42a7
+[2023-09-22T17:17:12.439+0700] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='linhhv' AIRFLOW_CTX_DAG_ID='crawl_dag_v01' AIRFLOW_CTX_TASK_ID='crawl' AIRFLOW_CTX_EXECUTION_DATE='2023-09-22T09:05:17.387394+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-09-22T09:05:17.387394+00:00'
+[2023-09-22T17:17:12.441+0700] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/crawlInvest.py", line 141, in run_my_async_task
+    Code_stock = ti.pull(task_ids='get_code_invest',key='code_list')
+AttributeError: 'TaskInstance' object has no attribute 'pull'
+[2023-09-22T17:17:12.451+0700] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=crawl_dag_v01, task_id=crawl, execution_date=20230922T090517, start_date=20230922T101712, end_date=20230922T101712
+[2023-09-22T17:17:12.460+0700] {standard_task_runner.py:104} ERROR - Failed to execute job 62 for task crawl ('TaskInstance' object has no attribute 'pull'; 1704)
+[2023-09-22T17:17:12.469+0700] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-22T17:17:12.486+0700] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
